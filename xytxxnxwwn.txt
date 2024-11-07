@@ -1,0 +1,5 @@
+the GET request and retrieve the HTML response
+* You should use the `BeautifulSoup` library to parse the HTML response and extract the specific information you want
+* You should print out the extracted data in a clear and organized format (e.g. a list or a dictionary)
+
+Good luck! Let me know if you have any questions or need further clarification.
