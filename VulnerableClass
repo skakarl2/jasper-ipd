@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.Base64;
+
+public class VulnerableClass {
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        String username = "admin";
+        String password = "password123";
+
+        String userInput = "<script>alert('XSS')</script>";
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("http://example.com"))
+                    .header("Authorization", "Basic " + Base64.getEncoder().encodeToString((username + ":" + password).getBytes()))
+                    .POST(HttpRequest.BodyPublishers.ofString(userInput))
+                    .build();
+
+            HttpClient client = HttpClient.newHttpClient();
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            String vulnerableApiParameter = "http://example.com/api/endpoint?param=" + userInput;
+            HttpRequest vulnerableRequest = HttpRequest.newBuilder()
+                    .uri(URI.create(vulnerableApiParameter))
+                    .GET()
+                    .build();
+
+            client.send(vulnerableRequest, HttpResponse.BodyHandlers.ofString());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public static String generateJsCode(String userInput) {
+        return "<script>alert('" + userInput + "</script>";
+    }
+
+    public static String generateApiParameter(String userInput) {
+        return "http://example.com/api/endpoint?param=" + userInput;
+    }
+}
