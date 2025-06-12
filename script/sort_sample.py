@@ -23,3 +23,12 @@ print("Sorted by age:", sorted_people)
 # Sort the list of dictionaries by name
 sorted_people_by_name = sorted(people, key=lambda person: person["name"])
 print("Sorted by name:", sorted_people_by_name)
+
+# Sort the list of dictionaries by the length of the name# Sort the list of dictionaries by the length of the name
+
+
+
+
+print("Sorted by name length:", sorted_people_by_name_length)sorted_people_by_name_length = sorted(people, key=lambda person: len(person["name"]))sorted_people_by_name_length = sorted(people, key=lambda person: len(person["name"]))
+print("Sorted by name length:", sorted_people_by_name_length)
+
