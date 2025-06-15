@@ -25,7 +25,7 @@ def heap_sort(arr):
 
     return arr
 
-    import unittest
+#    import unittest
 
 class TestHeapSort(unittest.TestCase):
     def test_heap_sort(self):
