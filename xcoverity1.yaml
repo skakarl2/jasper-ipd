@@ -1,0 +1,32 @@
+#capture:
+#  build:
+#analyze:
+#  checkers:
+#    checker-config:
+#      HARDCODED_CREDENTIALS:
+#        enabled: false
+       # options:
+       # report_empty_credentials: "false"
+    #concurrency: true
+    #default: true
+    #rule: true
+  #constraint-fpp: true
+  #parse-warnings:
+   # enabled: true
+
+analyze:
+  checkers:
+    all: false
+    audit: false
+    android-security: false
+    brakeman: false
+    default: false
+   # codexm:
+    #  - python-test.cxm
+ 
+    checker-config:
+      BAD_CERT_VERIFICATION:
+        enabled: true
+      HARDCODED_CREDENTIALS:
+        enabled: true
+  #cov-analyze-args: [ --disable-webapp-security ]

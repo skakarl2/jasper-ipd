@@ -1,0 +1,19 @@
+include `Python3`;
+
+pattern declarationBadEvilFunc {
+    functionDeclaration {
+        .functionSymbol == functionSymbol {
+            .simpleName == "my_bad_evil_func"
+        }
+    }
+};
+
+checker {
+    name = "BAD_EVIL_FUNCTION";
+    reports = for fun in globalset allFunctionCode where fun matches declarationBadEvilFunc: {
+        events = [{
+            description = "Bad evil function was called.";
+            location = fun.location;
+        }];
+    };
+};

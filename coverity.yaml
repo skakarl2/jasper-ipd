@@ -1,15 +1,28 @@
-capture:
-  build:
+# Coverity configuration file.
+# The schema is available here: <install-dir>/doc/configuration-schema.json
+
+#capture:
+#  build:
+#    build-command: "msbuild hello-world-bugs.sln /t:Build"
+#    clean-command: "msbuild hello-world-bugs.sln /t:Clean"
+
 analyze:
   checkers:
+    all: true
+    audit: true
+    android-security: true
+    brakeman: true
+    default: true
+    codexm:
+      - python-test.cxm
+
     checker-config:
-      HARDCODED_CREDENTIALS:
+      BAD_CERT_VERIFICATION:
         enabled: false
-       # options:
-       # report_empty_credentials: "false"
-    #concurrency: true
-    #default: true
-    #rule: true
-  #constraint-fpp: true
-  #parse-warnings:
-   # enabled: true
+      FORWARD_NULL:
+        enabled: false
+      UNREACHABLE:
+        enabled: false
+      COPY_PASTE_ERROR:
+        enabled: false
+  #cov-analyze-args: [ --disable-webapp-security ]
