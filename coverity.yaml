@@ -1,0 +1,16 @@
+capture:
+  build:
+analyze:
+  c-cpp-fnptr: true
+  checkers:
+    checker-config:
+      HARDCODED_CREDENTIALS:
+        enabled: false
+        options:
+          report_empty_credentials: "true"
+    concurrency: true
+    default: true
+    rule: true
+  constraint-fpp: true
+  parse-warnings:
+    enabled: true
