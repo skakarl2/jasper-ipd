@@ -25,7 +25,7 @@ analyze:
         enabled: false
      #HARDCODED_CREDENTIALS:
       SIGMA.hardcoded_secret:
-        enabled: false
+        enabled: true
       COPY_PASTE_ERROR:
         enabled: false
   #cov-analyze-args: [ --disable-webapp-security ]
