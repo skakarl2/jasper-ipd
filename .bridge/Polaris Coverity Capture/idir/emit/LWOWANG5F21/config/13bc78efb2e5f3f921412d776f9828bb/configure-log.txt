@@ -1,0 +1,4 @@
+Native Compiler invocation: ./ --coverity_resp_file=C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\tmp\cicf-f0db157c1c39cb7fa52ff7fdd620f6d3\cov-translate-resp-file1
+Working directory: C:\AI\jasper-ipd-1
+Comptype: capture-config-files
+* Configuring Configuration Buildless Capture

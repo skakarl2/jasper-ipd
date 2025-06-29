@@ -1,0 +1,1210 @@
+{
+  "header": {
+    "version": 1,
+    "format": "coverity-sigma-integration"
+  },
+  "sources": [
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\analyze_xiaomi_stock.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\hello-world-bugs.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\keerthy_code.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\StreamRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\linux\\build.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\HorizontalResizer.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\manual_code_aia.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\GitHubUserClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Side\\SideHeaderFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\IssueRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\misc\\v4error.json",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\mas\\codesign-app.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\V4\\GitHubV4ProjectNextClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\StreamRow.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test6.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\sl_2.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\FloatingCard.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\win\\make-installer.js",
+      "language": "javascript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test3.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Side\\SideFooterFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\asset\\html\\main-window.html",
+      "language": "html"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\bs.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupRepoFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\AppEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\GitHubClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test_ip_leakage_1.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\asset\\js\\test.js",
+      "language": "javascript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\tsc\\build-package.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Text.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\sample.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupCommon.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Infra\\Event.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupCreateFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\GitHubNotificationClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Setup\\StreamSetup.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test_demo.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\UserPrefEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\style.css",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\detect-input.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\sort_sample.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\V4\\GitHubV4IssueClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\ll_test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\GitHubQueryParser.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\llm_code.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Image.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Side\\VersionUpdateFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\sl.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Issues\\IssuesHeaderFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupProjectFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\flask_test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\DocsUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\DatePolling.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\V4\\GitHubV4Client.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\java\\merge_sprt.java",
+      "language": "java"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteVersionEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\DateUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamClient\\SystemStreamMeClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Infra\\Logger.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\ThemeNameEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\linked_list.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV3\\RemotePREntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Window\\MiscWindow\\MiscWindow.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\env\\setup-mdi.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamClient\\SystemStreamSubscriptionClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Link.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\win\\build.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\DEVELOP.md",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Log\\LoggerFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\mac\\notarize.js",
+      "language": "javascript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\.codesight\\default.json",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\GetIssueStateEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\MainWindowBind.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\demo-ai-match.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\sample_sort1.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\IPC\\SQLiteIPC.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\TrafficLightsSpace.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\UserStream\\UserStreamsFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\code_tag.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\highlight-and-scroll.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\UserAgentUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\ColorUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test-5.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\LICENSE",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\UserStream\\ProjectStreamEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\llm_written_code_aia.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Style\\color.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\copilot_written.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Window\\MainWindow\\MainWindowMenu.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\UserIcon.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\GARepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Style\\layout.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\llm_code.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\project-board.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserCodeExecFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Other\\NotificationFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\GitHubSearchClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\DraggableHeader.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\xcoverity1.yaml",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\ai-tag-test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\VersionEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\GitHubNotificationPolling.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\ShellUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefNetworkErrorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\BrowserViewBind.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\misc\\plist\\parent.plist",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\java\\ll_test.java",
+      "language": "java"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\UserStream\\StreamEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\IssueWindowFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefUnauthorizedFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Log\\LogView.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\RepositoryRow.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefScopeErrorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\llm_keerthy_3.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\show-diff-body.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamClient\\SystemStreamTeamClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\SystemStream\\SystemStreamsFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\IssueEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\ai_tag_summit.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Select.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Util\\PathUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\ForceUpdateIssuePolling.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\LibraryStream\\LibraryStreamsFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\ScrollView.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\env\\setup.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\MainWindowFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupFinishFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\JumpNavigationHistoryEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamClient\\StreamClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\SystemStream\\SystemStreamEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\tests.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\UserPrefBind.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\misc\\sample.json",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\tic.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV4\\RemoteGitHubV4ViewerEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Infra\\fetchw.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\VersionPolling.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefSetup\\PrefSetupAccessToken.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefSetup\\PrefSetupConfirm.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV3\\RemoteGitHubNotification.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\JumpNavigationHistoryRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamPolling.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Translate.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Loading.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\UserStream\\FilterStreamEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\StreamBind.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\GitHubUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\FilterHistoryEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Other\\BadgeFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\sl_test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\JumpNavigation\\JumpNavigationFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Style\\appTheme.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test-write.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\tsc\\watch.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Setup\\DBSetup.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\mac\\build.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\package.json",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\mac\\codesign-developer.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test_ai.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\ButtonGroup.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\sort.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\TextInput.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\mas\\build.sh",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\misc\\plist\\notarization.plist",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV4\\RemoteGitHubV4IssueNodesEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\gin_rummy_test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\FilterSQLRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\SystemStream\\SubscribeEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\StreamIssueEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserLoadFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserSearchFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\README.md",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Util\\test-match.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFrameFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\not_user_writt.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV4\\RemoteGitHubV4Entity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\StreamEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\tag_ai.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RepositoryEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\IPC\\IssueIPC.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\ArrayUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefSetup\\PrefSetupCommon.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\armstrong.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\BrowserViewTranslate.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV3\\RemoteUserWatchingEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\GitHub\\GitHubIssueClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\SubscriptionIssueEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Other\\ExportDataFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test2.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamClient\\SystemStreamWatchingClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\TimerUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\update-by-self.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\leo_demo_customer01.php",
+      "language": "php"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\asset\\html\\main-window-preload.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\asset\\html\\issue-window-preload.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\SubscriptionIssuesRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test4.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV3\\RemoteUserTeamEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\CheckBox.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupCardFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\UserPrefRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Util\\testipd.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\external-browser.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\python-sc.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\coverity.yaml",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\sl_win_test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV4\\RemoteGitHubV4ProjectEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\IPC\\BrowserViewIPC.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\get-issue-state.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\python-test.cxm",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Util\\PlatformUtil.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\misc\\plist\\child.plist",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\binary_search.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Other\\KeyboardShortcutFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\local-test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Other\\AboutFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\asset\\html\\empty.html",
+      "language": "html"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\my_code.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\.gitignore",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Window\\MainWindow\\MainWindowEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Browser\\BrowserFragmentAsset\\project-next-board.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\UserPrefEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\FilterHistoryRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Icon.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\DateEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupTeamFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\leo_snps_stock.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\SideSection.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\IssueEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\demo-1.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Issues\\IssuesFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\.codesight\\scan_configs\\Black_Duck_SCA.json",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Infra\\DB.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\IPC\\UserPrefIPC.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test-aia-code-tag.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\CHANGELOG.md",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Modal.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\ARCHITECTURE.md",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Side\\SideFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\SideSectionTitle.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\script\\leo_demo_customero1.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\IconButton.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\IPC\\StreamIPC.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\DraggableList.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\ai_tag.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Issues\\IssueUpdatedBannerFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Window\\MainWindow\\MainWindow.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\ClickView.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\Button.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\IssueRow.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\StreamEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\war_game_test.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefSetupFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\asset\\html\\issue-window.html",
+      "language": "html"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefCoverFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\my_code.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\GitHubQueryType.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\asset\\js\\context-menu.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\View.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV3\\RemoteIssueEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\keerthy_3.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\Type\\RemoteGitHubV3\\RemoteGitHubHeaderEntity.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\sample_code.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\tes-auth.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\IssueBind.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\inline_tag.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\LibraryStream\\LibraryStreamEditorFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\merge_sort_with_tests.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\multi.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\StreamIssueRepo.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Stream\\SampleIconNames.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\unittest",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\index.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\tsconfig.json",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\graph_ex.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\StreamSetup\\StreamSetupLoadingFragment.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Repository\\Polling\\StreamClient\\ProjectStreamClient.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\IPC\\MainWindowIPC.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\test\\my_code_2.py",
+      "language": "python 3"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Event\\BrowserEvent.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Window\\MainWindow\\MainWindowTranslate.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\python-test.cxm",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\Bind\\SQLiteBind.ts",
+      "language": "typescript"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Main\\python\\test-llm-branch",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Fragment\\Pref\\PrefSetup\\PrefSetupGitHubHost.tsx",
+      "language": "text"
+    },
+    {
+      "file": "C:\\AI\\jasper-ipd-1\\src\\Renderer\\Library\\View\\ContextMenu.tsx",
+      "language": "text"
+    }
+  ],
+  "issues": [
+    {
+      "checker": "SIGMA.certificate_verification_disabled",
+      "function": "!hello-world-bugs.py!%SCRIPT",
+      "language": "python 3",
+      "subType": "core_python_requests",
+      "issueType": "sigma.certificate_verification_disabled",
+      "events": [
+        {
+          "description": "Disabling checks for certificate revocation results in a failure to properly authenticate its SSL/TLS peer, thereby allowing a client to connect to this system with a revoked certificate.",
+          "line": 4,
+          "main": true,
+          "file": "C:\\AI\\jasper-ipd-1\\script\\hello-world-bugs.py",
+          "tag": "Sigma main event",
+          "linkURL": "",
+          "linkText": ""
+        },
+        {
+          "description": "Explicitly set the `verify` attribute to `True` or omit this optional attribute as it defaults to `True`.",
+          "line": 4,
+          "main": false,
+          "file": "C:\\AI\\jasper-ipd-1\\script\\hello-world-bugs.py",
+          "tag": "remediation",
+          "linkURL": "",
+          "linkText": ""
+        }
+      ],
+      "extra": "certificate_verification_disabled_core_python_requests -- /script/hello-world-bugs.py",
+      "file": "C:\\AI\\jasper-ipd-1\\script\\hello-world-bugs.py",
+      "subcategory": "core_python_requests",
+      "properties": {
+        "category": "Sigma",
+        "impact": "Medium",
+        "issueKind": "SECURITY",
+        "localEffect": "",
+        "longDescription": "Disabling checks for certificate revocation results in a failure to properly authenticate its SSL/TLS peer, thereby allowing a client to connect to this system with a revoked certificate.",
+        "type": "Certificate verification disabled",
+        "cwe": 295
+      },
+      "antecedentMerges": [
+        {
+          "checker": "SIGMA.certificate_verification_disabled_core_python_requests"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-waiter\versions\0.2.67/polaris-waiter C:\AI\jasper-ipd-1\.bridge\Polaris Waiter\data.json
+{"level":"info","logger":"Polaris Waiter","msg":"Waiting for test with assessment type \"SAST(sastFull)\" and id \"011e9a93-7d64-4b5c-a73a-30c22396c4a3\"","time":"2025-06-19 19:12:28.1965 +08"}
+{"level":"error","logger":"Polaris Waiter","msg":"error while waiting for test with assessment type \"SAST(sastFull)\" and id \"011e9a93-7d64-4b5c-a73a-30c22396c4a3\": the artifact uploaded was found unsuccessful","time":"2025-06-19 19:12:28.2129 +08"}

@@ -1,0 +1,2 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-policy-checker\versions\0.2.70/polaris-policy-checker C:\AI\jasper-ipd-1\.bridge\Polaris Policy Checker\data.json
+{"level":"warning","logger":"Polaris Policy Checker","msg":"Skipping policy violations check for \"SAST(sastFull)\" assessment with id \"78d9c290-7580-4c0f-90b9-9f2e663ba3b4\", as the test is not completed","time":"2025-06-19 20:35:10.9533 +08"}

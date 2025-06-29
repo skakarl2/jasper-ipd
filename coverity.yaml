@@ -23,6 +23,9 @@ analyze:
         enabled: false
       UNREACHABLE:
         enabled: false
+     # HARDCODED_CREDENTIALS:
+      SIGMA.hardcoded_secret:
+        enabled: false
       COPY_PASTE_ERROR:
         enabled: false
   #cov-analyze-args: [ --disable-webapp-security ]

@@ -1,0 +1,14 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-controller\versions\0.2.181/polaris-controller C:\AI\jasper-ipd-1\.bridge\Polaris Controller\data.json
+{"level":"info","logger":"Polaris Controller","msg":"Running for \"sast\" assessment with scan type \"sastFull\"","time":"2025-06-19 19:03:13.2824 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"fetching recommended \"coverity\" tool info...","time":"2025-06-19 19:03:13.3002 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"checking \"coverity\" tool installation inside bridge home directory: C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0","time":"2025-06-19 19:03:14.3265 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"Checking tool version for \"cov_thin_client\" in \"C:\\\\Users\\\\wangleo\\\\.blackduck\\\\bridge\\\\tools\\\\cov-thin-client\\\\2025.3.0\"","time":"2025-06-19 19:03:14.3279 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"Running command:C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\coverity.exe --version","time":"2025-06-19 19:03:14.3279 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"Got tool version for \"cov_thin_client\": 2025.3.0","time":"2025-06-19 19:03:14.4231 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"\"coverity\" tool is already installed...","time":"2025-06-19 19:03:14.7680 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"fetching recommended \"Sigma\" tool info...","time":"2025-06-19 19:03:14.7680 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"checking \"Sigma\" tool installation inside bridge home directory: C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0","time":"2025-06-19 19:03:15.1210 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"Checking tool version for \"sigma\" in \"C:\\\\Users\\\\wangleo\\\\.blackduck\\\\bridge\\\\tools\\\\sigma\\\\2025.4.0\"","time":"2025-06-19 19:03:15.1210 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"Running command:C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe --version","time":"2025-06-19 19:03:15.1210 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"Got tool version for \"sigma\": 2025.4.0","time":"2025-06-19 19:03:15.2214 +08"}
+{"level":"info","logger":"Polaris Controller","msg":"\"Sigma\" tool is already installed...","time":"2025-06-19 19:03:15.5570 +08"}

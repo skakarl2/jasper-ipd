@@ -1,0 +1,2 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-initializer\versions\1.0.112/polaris-initializer C:\AI\jasper-ipd-1\.bridge\Polaris Initializer\data.json
+{"level":"error","logger":"Polaris Initializer","msg":"Invalid access token \"i6lnkpoj8l69l2bp3m3g6ukj1idf6m7haqskl8lfgrtmed4chomro8tvfkbku7tdsim4ckbr5aelm \", decode error: illegal base32 data at input byte 77","time":"2025-06-19 16:24:30.2040 +08"}

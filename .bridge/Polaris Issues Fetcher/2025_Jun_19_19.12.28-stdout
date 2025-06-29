@@ -1,0 +1,2 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-issues-fetcher\versions\0.2.65/polaris-issues-fetcher C:\AI\jasper-ipd-1\.bridge\Polaris Issues Fetcher\data.json
+{"level":"warning","logger":"Polaris Issues Fetcher","msg":"Will not fetch issues for \"SAST(sastFull)\" assessment, as the test is not completed","time":"2025-06-19 19:12:28.3334 +08"}

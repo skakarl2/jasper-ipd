@@ -1,0 +1,3 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-policy-checker\versions\0.2.70/polaris-policy-checker C:\AI\jasper-ipd-1\.bridge\Polaris Policy Checker\data.json
+{"level":"info","logger":"Polaris Policy Checker","msg":"Checking for policy violations for \"SAST(sastFull)\" assessment...","time":"2025-06-19 19:44:42.3314 +08"}
+{"level":"info","logger":"Polaris Policy Checker","msg":"no policies were violated to break the build","time":"2025-06-19 19:44:43.6365 +08"}

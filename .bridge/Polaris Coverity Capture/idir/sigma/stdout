@@ -1,0 +1,38 @@
+Copyright (c) 2025 Black Duck Software, Inc.
+For documentation and support, visit https://documentation.blackduck.com/bundle/sigma-ug/page/topics/sigma_user_guide.html
+By using this software, the user accepts the terms of Black Duck Software's end user software license and maintenance agreement found at: https://www.blackduck.com/company/legal.html
+
+2025-06-29 14:16:06 INFO Excluded 3 file paths from analysis.
+2025-06-29 14:16:06 INFO Telemetry data conforms to schema 92e591e70397496b1cf9364303525c4b50173722c90a9eb8cae2bfc9970725dd
+2025-06-29 14:16:06 INFO Analysis done in 12 seconds
+2025-06-29 14:16:06 INFO Found 1 defects
+
+Identified
+
+│ File Type  │Occurrences│
+├────────────┼───────────┤
+│TypeScript  │        111│
+│TSX         │         78│
+│Python      │         59│
+│Unknown     │         22│
+│Shell       │         10│
+│JSON        │          6│
+│Markdown    │          4│
+│HTML        │          3│
+│JavaScript  │          3│
+│PropertyList│          3│
+│YAML        │          2│
+│Java        │          2│
+│PHP         │          1│
+│CSS         │          1│
+
+
+Issues
+
+│                         Type                         │          Tags          │Occurrences│
+├──────────────────────────────────────────────────────┼────────────────────────┼───────────┤
+│certificate_verification_disabled_core_python_requests│web, authn, cert, crypto│          1│
+
+Full results: C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\sigma\sigma-output.json
+
+Found 1 issues in 12 seconds

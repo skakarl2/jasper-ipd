@@ -1,0 +1,10 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-artifacts-uploader\versions\0.2.89/polaris-artifacts-uploader C:\AI\jasper-ipd-1\.bridge\Polaris Artifacts Uploader\data.json
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"uploading artifact for \"SAST(sastFull)\" assessment with id \"78b96a3b-2fe9-49cd-9018-0e7f7c5a455a\"","time":"2025-06-19 19:40:55.0994 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"Uploading artifact C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip for \"SAST(sastFull)\" assessment","time":"2025-06-19 19:40:57.0068 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"Uploading Progress of \"SAST(sastFull)\" artifact:   1%  16384/931822","time":"2025-06-19 19:40:57.8669 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"Uploading Progress of \"SAST(sastFull)\" artifact:  26%  245760/931822","time":"2025-06-19 19:40:58.6689 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"Uploading Progress of \"SAST(sastFull)\" artifact:  52%  491520/931822","time":"2025-06-19 19:40:59.1868 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"Uploading Progress of \"SAST(sastFull)\" artifact:  77%  720896/931822","time":"2025-06-19 19:40:59.2328 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"Uploading Progress of \"SAST(sastFull)\" artifact: 100%  931822/931822","time":"2025-06-19 19:40:59.4416 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"successfully uploaded artifact \"C:\\\\AI\\\\jasper-ipd-1\\\\.bridge\\\\Polaris Coverity Capture\\\\idir.zip\"","time":"2025-06-19 19:41:00.4200 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"successfully resumed \"SAST(sastFull)\" assessment with id \"78b96a3b-2fe9-49cd-9018-0e7f7c5a455a\"","time":"2025-06-19 19:41:01.0903 +08"}

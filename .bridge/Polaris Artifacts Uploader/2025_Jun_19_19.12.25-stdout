@@ -1,0 +1,4 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-artifacts-uploader\versions\0.2.89/polaris-artifacts-uploader C:\AI\jasper-ipd-1\.bridge\Polaris Artifacts Uploader\data.json
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"uploading artifact for \"SAST(sastFull)\" assessment with id \"011e9a93-7d64-4b5c-a73a-30c22396c4a3\"","time":"2025-06-19 19:12:25.9162 +08"}
+{"level":"error","logger":"Polaris Artifacts Uploader","msg":"error while uploading the artifact \"C:\\\\AI\\\\jasper-ipd-1\\\\.bridge\\\\Polaris Coverity Capture\\\\idir.zip\" for \"SAST(sastFull)\" assessment: scan was found unsuccessful","time":"2025-06-19 19:12:25.9310 +08"}
+{"level":"info","logger":"Polaris Artifacts Uploader","msg":"failed the test for \"SAST(sastFull)\" assessment with id \"011e9a93-7d64-4b5c-a73a-30c22396c4a3\"","time":"2025-06-19 19:12:28.1242 +08"}

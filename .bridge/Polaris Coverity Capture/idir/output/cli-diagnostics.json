@@ -1,0 +1,830 @@
+{
+  "type": "Coverity CLI Diagnostics Data",
+  "version": 1,
+  "general": {
+    "coverity-static-analysis-version": "2025.3.0"
+  },
+  "capture": {
+    "primary-capture-mode": "Auto",
+    "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\coverity.exe capture --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir -o analyze.location=connect",
+    "working-directory": "C:\\AI\\jasper-ipd-1",
+    "project-directory": "C:\\AI\\jasper-ipd-1",
+    "intermediate-directory": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir",
+    "configuration-file-path": "C:\\AI\\jasper-ipd-1\\coverity.yaml",
+    "configuration": {
+      "command-line-overrides": [
+        "--config-override",
+        "analyze.location=connect"
+      ],
+      "file-configuration": {
+        "analyze": {
+          "checkers": {
+            "all": true,
+            "android-security": true,
+            "audit": true,
+            "brakeman": true,
+            "checker-config": {
+              "BAD_CERT_VERIFICATION": {
+                "enabled": false
+              },
+              "COPY_PASTE_ERROR": {
+                "enabled": false
+              },
+              "FORWARD_NULL": {
+                "enabled": false
+              },
+              "SIGMA.hardcoded_secret": {
+                "enabled": false
+              },
+              "UNREACHABLE": {
+                "enabled": false
+              }
+            },
+            "codexm": [
+              "python-test.cxm"
+            ],
+            "default": true
+          }
+        },
+        "commit": null
+      },
+      "effective-configuration": {
+        "analyze": {
+          "checkers": {
+            "all": true,
+            "android-security": true,
+            "audit": true,
+            "brakeman": true,
+            "checker-config": {
+              "BAD_CERT_VERIFICATION": {
+                "enabled": false
+              },
+              "COPY_PASTE_ERROR": {
+                "enabled": false
+              },
+              "FORWARD_NULL": {
+                "enabled": false
+              },
+              "SIGMA.hardcoded_secret": {
+                "enabled": false
+              },
+              "UNREACHABLE": {
+                "enabled": false
+              }
+            },
+            "codexm": [
+              "C:\\AI\\jasper-ipd-1\\python-test.cxm"
+            ],
+            "default": true
+          },
+          "location": "connect"
+        },
+        "commit": null,
+        "caching": {
+          "bytecode": true,
+          "tu": false,
+          "wur": true
+        }
+      },
+      "configuration-hash": "08473096995857100eebdcf540e00b9395ba5e581bd836e3ed674c1e32fa48dc"
+    },
+    "capture-summary": {
+      "failed": 14,
+      "files-captured": 277,
+      "ignored": 16,
+      "lines-of-code": 30945,
+      "succeeded": 277
+    },
+    "capture-rate": 95.1890034364261,
+    "command-info": [
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-manage-emit --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir check-compatible",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "Intermediate directory C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir is compatible"
+        ],
+        "start-time": "2025-06-29T22:15:33.0104011+08:00",
+        "end-time": "2025-06-29T22:15:33.0679869+08:00",
+        "duration": 57585600
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-manage-emit --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir reset-host-name",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "start-time": "2025-06-29T22:15:32.431676+08:00",
+        "end-time": "2025-06-29T22:15:33.0104011+08:00",
+        "duration": 578725600
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-internal-manage-cache check",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "start-time": "2025-06-29T22:15:33.0813204+08:00",
+        "end-time": "2025-06-29T22:15:35.0008889+08:00",
+        "duration": 1919569400
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-manage-emit --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir create",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "start-time": "2025-06-29T22:15:35.0036974+08:00",
+        "end-time": "2025-06-29T22:15:35.0668395+08:00",
+        "duration": 63142000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-manage-emit --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir list-capture-diagnostics",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "        \"id\" : 485,",
+          "        \"source-language\" : \"Text data\",",
+          "        \"capture-percentage\" : 100,",
+          "        \"had-failures\" : false,",
+          "        \"had-recoverable-errors\" : false,",
+          "        \"had-abstract-syntax-trees\" : false",
+          "      }",
+          "    }",
+          "  ]",
+          "}"
+        ],
+        "start-time": "2025-06-29T22:15:35.0787143+08:00",
+        "end-time": "2025-06-29T22:15:35.1969116+08:00",
+        "duration": 118197800
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler gcc --comptype gcc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: *-g++ *-gcc ar g++ g++-* gcc gcc-* ld"
+        ],
+        "start-time": "2025-06-29T22:15:35.2299793+08:00",
+        "end-time": "2025-06-29T22:15:37.4398013+08:00",
+        "duration": 2209820000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler cc --comptype gcc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: cc"
+        ],
+        "stderr-tail": [
+          "[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. ",
+          "[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. ",
+          "[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. ",
+          "[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. ",
+          "[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. ",
+          "[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. "
+        ],
+        "start-time": "2025-06-29T22:15:37.4398013+08:00",
+        "end-time": "2025-06-29T22:15:38.1411422+08:00",
+        "duration": 701341400
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler c++ --comptype g++ --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: c++"
+        ],
+        "start-time": "2025-06-29T22:15:38.1411422+08:00",
+        "end-time": "2025-06-29T22:15:38.7734905+08:00",
+        "duration": 632349100
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler clang --comptype clangcc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: clang clang++"
+        ],
+        "start-time": "2025-06-29T22:15:38.7734905+08:00",
+        "end-time": "2025-06-29T22:15:39.4133224+08:00",
+        "duration": 639831700
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler java --comptype java --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: apt java javac javaw",
+          "Successfully generated configuration for the buildless capture patterns: jar"
+        ],
+        "start-time": "2025-06-29T22:15:39.4133224+08:00",
+        "end-time": "2025-06-29T22:15:40.0482341+08:00",
+        "duration": 634912400
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler go --comptype go --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: go"
+        ],
+        "start-time": "2025-06-29T22:15:40.0482341+08:00",
+        "end-time": "2025-06-29T22:15:40.6878787+08:00",
+        "duration": 639644400
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler ccache --comptype prefix --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: ccache"
+        ],
+        "start-time": "2025-06-29T22:15:40.6878787+08:00",
+        "end-time": "2025-06-29T22:15:41.3268833+08:00",
+        "duration": 639004200
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler kotlinc --comptype kotlinc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: kotlin kotlinc",
+          "Successfully generated configuration for the buildless capture patterns: android kotlin-module"
+        ],
+        "stderr-tail": [
+          "[WARNING] Template config template-java-config-0 already exists for java and will be reused. ",
+          "[WARNING] Template config template-apt-config-0 already exists for apt and will be reused. ",
+          "[WARNING] Template config template-javaw-config-0 already exists for javaw and will be reused. "
+        ],
+        "start-time": "2025-06-29T22:15:41.3268833+08:00",
+        "end-time": "2025-06-29T22:15:41.9714892+08:00",
+        "duration": 644606200
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler csc --comptype csc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: csc csc.dll csc2 devenv dotnet microsoft.aspnetcore.mvc.razor.viewcompilation microsoft.aspnetcore.mvc.razor.viewcompilation-x64 microsoft.aspnetcore.mvc.razor.viewcompilation-x64.dll microsoft.aspnetcore.mvc.razor.viewcompilation-x86 microsoft.aspnetcore.mvc.razor.viewcompilation-x86.dll microsoft.aspnetcore.mvc.razor.viewcompilation.dll msbuild razor"
+        ],
+        "start-time": "2025-06-29T22:15:41.9714892+08:00",
+        "end-time": "2025-06-29T22:15:42.6304217+08:00",
+        "duration": 658932900
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler vbc --comptype vbc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: vbc vbc.dll"
+        ],
+        "stderr-tail": [
+          "[WARNING] Template config template-dotnet-config-0 already exists for dotnet and will be reused. "
+        ],
+        "start-time": "2025-06-29T22:15:42.6304217+08:00",
+        "end-time": "2025-06-29T22:15:43.3009611+08:00",
+        "duration": 670539800
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler cl --comptype msvc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: cl lib link"
+        ],
+        "start-time": "2025-06-29T22:15:43.3009611+08:00",
+        "end-time": "2025-06-29T22:15:43.9827099+08:00",
+        "duration": 681749100
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler i686-w64-mingw32-gcc --comptype gcc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: i686-w64-mingw32-g++ i686-w64-mingw32-gcc"
+        ],
+        "stderr-tail": [
+          "[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. ",
+          "[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. ",
+          "[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. ",
+          "[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. ",
+          "[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. ",
+          "[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. "
+        ],
+        "start-time": "2025-06-29T22:15:43.9827099+08:00",
+        "end-time": "2025-06-29T22:15:44.6544098+08:00",
+        "duration": 671699900
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler i686-w64-mingw32-c++ --comptype g++ --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: i686-w64-mingw32-c++"
+        ],
+        "start-time": "2025-06-29T22:15:44.65502+08:00",
+        "end-time": "2025-06-29T22:15:45.3459632+08:00",
+        "duration": 690942900
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler mingw32-gcc --comptype gcc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: mingw32-g++ mingw32-gcc"
+        ],
+        "stderr-tail": [
+          "[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. ",
+          "[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. ",
+          "[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. ",
+          "[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. ",
+          "[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. ",
+          "[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. "
+        ],
+        "start-time": "2025-06-29T22:15:45.3459632+08:00",
+        "end-time": "2025-06-29T22:15:46.0120287+08:00",
+        "duration": 666065200
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler mingw32-c++ --comptype g++ --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: mingw32-c++"
+        ],
+        "start-time": "2025-06-29T22:15:46.0133429+08:00",
+        "end-time": "2025-06-29T22:15:46.6824586+08:00",
+        "duration": 669116200
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler x86_64-w64-mingw32-gcc --comptype gcc --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: x86_64-w64-mingw32-g++ x86_64-w64-mingw32-gcc"
+        ],
+        "stderr-tail": [
+          "[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. ",
+          "[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. ",
+          "[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. ",
+          "[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. ",
+          "[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. ",
+          "[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. "
+        ],
+        "start-time": "2025-06-29T22:15:46.6824586+08:00",
+        "end-time": "2025-06-29T22:15:47.3935991+08:00",
+        "duration": 711141000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\build-compiler-configs\\coverity_config.xml --compiler x86_64-w64-mingw32-c++ --comptype g++ --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/build-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the compilers: x86_64-w64-mingw32-c++"
+        ],
+        "start-time": "2025-06-29T22:15:47.3935991+08:00",
+        "end-time": "2025-06-29T22:15:48.0737345+08:00",
+        "duration": 680136000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --dart",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the buildless capture patterns: capture-config-files dart"
+        ],
+        "start-time": "2025-06-29T22:15:48.0737345+08:00",
+        "end-time": "2025-06-29T22:15:48.6790117+08:00",
+        "duration": 605277000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --javascript",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "[NOTE] This Coverity installation only supports record with source for \"javascript\". Attempts to capture source files for this language without specifying --record-with-source to cov-build will be ignored.",
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the buildless capture patterns: capture-config-files html javascript jsx typescript vue"
+        ],
+        "start-time": "2025-06-29T22:15:48.6790117+08:00",
+        "end-time": "2025-06-29T22:15:49.3115823+08:00",
+        "duration": 632570700
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --php",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the buildless capture patterns: capture-config-files php"
+        ],
+        "start-time": "2025-06-29T22:15:49.3115823+08:00",
+        "end-time": "2025-06-29T22:15:49.9301824+08:00",
+        "duration": 618599700
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --python",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the buildless capture patterns: capture-config-files python"
+        ],
+        "start-time": "2025-06-29T22:15:49.9301824+08:00",
+        "end-time": "2025-06-29T22:15:50.5479805+08:00",
+        "duration": 617798600
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --ruby",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "",
+          "Generated coverity_config.xml at location C:/AI/jasper-ipd-1/.bridge/Polaris Coverity Capture/idir/coverity-cli/buildless-compiler-configs/coverity_config.xml",
+          "Successfully generated configuration for the buildless capture patterns: capture-config-files ruby"
+        ],
+        "start-time": "2025-06-29T22:15:50.5479805+08:00",
+        "end-time": "2025-06-29T22:15:51.1705247+08:00",
+        "duration": 622544100
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-configure -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --comptype capture-config-files --file-regex $capture-config-files$ --template",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stderr-tail": [
+          "[WARNING] Configuration already exists for file regex $capture-config-files$",
+          "          and it will not be updated."
+        ],
+        "start-time": "2025-06-29T22:15:51.1705247+08:00",
+        "end-time": "2025-06-29T22:15:51.2341457+08:00",
+        "duration": 63621000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-internal-capture-files --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir -c C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\buildless-compiler-configs\\coverity_config.xml --ticker-mode none --append-log --capture-list-file C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir\\coverity-cli\\capture-file-list-791596431 --record-with-source",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "[INFO] Buildless capture started.",
+          "[INFO] Emitting 271 Files.",
+          "[INFO] Buildless capture completed."
+        ],
+        "start-time": "2025-06-29T22:15:51.274806+08:00",
+        "end-time": "2025-06-29T22:15:53.5070265+08:00",
+        "duration": 2232220000
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-manage-emit --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir list-capture-diagnostics",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "        \"id\" : 485,",
+          "        \"source-language\" : \"Text data\",",
+          "        \"capture-percentage\" : 100,",
+          "        \"had-failures\" : false,",
+          "        \"had-recoverable-errors\" : false,",
+          "        \"had-abstract-syntax-trees\" : false",
+          "      }",
+          "    }",
+          "  ]",
+          "}"
+        ],
+        "start-time": "2025-06-29T22:15:53.5075648+08:00",
+        "end-time": "2025-06-29T22:15:53.6019081+08:00",
+        "duration": 94343500
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-run-sigma --project-dir C:\\AI\\jasper-ipd-1 --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir --coverity-config C:\\Users\\wangleo\\AppData\\Local\\Temp\\cov-run-sigma-config-2879624116\\coverity.yaml --sigma-binary-path C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe --enable-telemetry",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemoteGitHubHeaderEntity.ts",
+          "Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/IssueBind.ts",
+          "Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/StreamIssueRepo.ts",
+          "Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Stream/SampleIconNames.ts",
+          "Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/index.ts",
+          "Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/ProjectStreamClient.ts",
+          "Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/IPC/MainWindowIPC.ts",
+          "Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/BrowserEvent.ts",
+          "Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Window/MainWindow/MainWindowTranslate.ts",
+          "Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/SQLiteBind.ts"
+        ],
+        "start-time": "2025-06-29T22:15:53.6121041+08:00",
+        "end-time": "2025-06-29T22:16:07.6518811+08:00",
+        "duration": 14039778900
+      },
+      {
+        "command-line": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\cov-thin-client\\2025.3.0\\bin\\cov-manage-emit --dir C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir list-capture-diagnostics",
+        "cwd": "C:\\AI\\jasper-ipd-1",
+        "env": {
+          "COVERITY_CACHE_API_TOKEN_FILE": "C:\\Users\\wangleo\\AppData\\Local\\Temp\\polaris_coverity_cache3214095242\\.authKey",
+          "COVERITY_CACHE_KEY": "0bdc5587-308a-45d2-9158-92ed7904de95",
+          "COVERITY_CACHE_URL": "https://poc.polaris.synopsys.com/api/cache",
+          "COVERITY_CLI_CAPTURE_ZIP_ARCHIVE": "C:\\AI\\jasper-ipd-1\\.bridge\\Polaris Coverity Capture\\idir.zip",
+          "COVERITY_CLI_POLARIS_CLIENT": "true",
+          "COVERITY_CLI_POLARIS_SIGMA": "C:\\Users\\wangleo\\.blackduck\\bridge\\tools\\sigma\\2025.4.0\\sigma.exe",
+          "COVERITY_NO_LOG_ENVIRONMENT_VARIABLES": "1"
+        },
+        "stdout-tail": [
+          "        \"id\" : 485,",
+          "        \"source-language\" : \"Text data\",",
+          "        \"capture-percentage\" : 100,",
+          "        \"had-failures\" : false,",
+          "        \"had-recoverable-errors\" : false,",
+          "        \"had-abstract-syntax-trees\" : false",
+          "      }",
+          "    }",
+          "  ]",
+          "}"
+        ],
+        "start-time": "2025-06-29T22:16:07.6637265+08:00",
+        "end-time": "2025-06-29T22:16:07.7651535+08:00",
+        "duration": 101427200
+      }
+    ]
+  },
+  "analysis": {
+    "configuration": {}
+  }
+}

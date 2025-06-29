@@ -1,0 +1,2 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-initializer\versions\1.0.112/polaris-initializer C:\AI\jasper-ipd-1\.bridge\Polaris Initializer\data.json
+{"level":"error","logger":"Polaris Initializer","msg":"portfolio service: failed to fetch portfolio id : Get \"https://poc.polaris.synopsys.com/api/portfolio/portfolios\": dial tcp 104.18.36.64:443: i/o timeout","time":"2025-06-19 20:55:36.0243 +08"}

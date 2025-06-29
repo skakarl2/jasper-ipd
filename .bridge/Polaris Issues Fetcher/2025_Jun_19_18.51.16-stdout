@@ -1,0 +1,3 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-issues-fetcher\versions\0.2.65/polaris-issues-fetcher C:\AI\jasper-ipd-1\.bridge\Polaris Issues Fetcher\data.json
+{"level":"info","logger":"Polaris Issues Fetcher","msg":"Fetching issues for \"SAST(sastFull)\" assessment","time":"2025-06-19 18:51:16.0762 +08"}
+{"level":"info","logger":"Polaris Issues Fetcher","msg":"Successfully fetched issues for assessment type \"SAST(sastFull)\" with id \"fcd522df-6159-4cba-a90f-a7cdb2299b1b\"\n {\n \"critical\": 0,\n \"high\": 0,\n \"informational\": 0,\n \"low\": 0,\n \"medium\": 0\n}\n","time":"2025-06-19 18:51:17.4182 +08"}

@@ -1,0 +1,5 @@
+C:\bridge-cli-bundle-3.5.1-win64\adapters\polaris-waiter\versions\0.2.67/polaris-waiter C:\AI\jasper-ipd-1\.bridge\Polaris Waiter\data.json
+{"level":"info","logger":"Polaris Waiter","msg":"Waiting for test with assessment type \"SAST(sastFull)\" and id \"bc3b627e-ba6d-48c5-a3f6-fd83e4d57d33\"","time":"2025-06-19 19:30:25.7071 +08"}
+{"level":"info","logger":"Polaris Waiter","msg":"Polling Test Manager: state of test with assessment type \"SAST(sastFull)\" and id \"bc3b627e-ba6d-48c5-a3f6-fd83e4d57d33\" is \"Queuing\"","time":"2025-06-19 19:30:27.0110 +08"}
+{"level":"info","logger":"Polaris Waiter","msg":"Polling Test Manager: state of test with assessment type \"SAST(sastFull)\" and id \"bc3b627e-ba6d-48c5-a3f6-fd83e4d57d33\" is \"Scanning\"","time":"2025-06-19 19:30:47.7652 +08"}
+{"level":"info","logger":"Polaris Waiter","msg":"test with assessment type \"SAST(sastFull)\" and id \"bc3b627e-ba6d-48c5-a3f6-fd83e4d57d33\" completed successfully","time":"2025-06-19 19:34:05.3216 +08"}

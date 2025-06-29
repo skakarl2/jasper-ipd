@@ -1,0 +1,5 @@
+Running Sigma.
+C:\Users\wangleo\.blackduck\bridge\tools\sigma\2025.4.0\sigma.exe --disable-telemetry --internal-enable-telemetry --internal-dump-telemetry-to-file C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\telemetry\sigma\c6211eaa25cd64f3489340a0a5ce7a9btlmtry.jsonl --internal-polaris-scan-log C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\sigma\sigma-log.json --internal-coverity-config C:\Users\wangleo\AppData\Local\Temp\cov-run-sigma-config-2879624116\coverity.yaml analyze --format COVERITY --output C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\sigma\sigma-output.json --make-paths-absolute --internal-disable-checks-by-lang-in-coverity-v0 true --internal-polaris-metrics-file C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\sigma\metrics.json C:\AI\jasper-ipd-1
+
+Importing sources...
+Completed source import.

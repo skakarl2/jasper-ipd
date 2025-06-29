@@ -1,0 +1,4 @@
+{
+  "executor_name" : "cov-run-sigma",
+  "use_new_merge_keys" : true
+}

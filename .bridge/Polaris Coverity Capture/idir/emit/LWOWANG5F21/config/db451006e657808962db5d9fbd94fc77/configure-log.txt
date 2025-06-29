@@ -1,0 +1,13 @@
+Native Compiler invocation: ./ --coverity_resp_file=C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\tmp\cicf-f0db157c1c39cb7fa52ff7fdd620f6d3\cov-translate-resp-file7
+Working directory: C:\AI\jasper-ipd-1
+Comptype: python
+* Configuring Python Buildless Capture
+Checking for 'mount' command
+Checking for valid Cygwin bin directory in C:/Users/wangleo/anaconda3/Library/usr
+mount exists: 1
+bash exists: 0
+Cygwin1.dll exists: 0
+cygpath exists: 1
+Checking for Cygwin registry keys
+           * HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Cygnus Solutions\Cygwin
+           * HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Cygnus Solutions\Cygwin

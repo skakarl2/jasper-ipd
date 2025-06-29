@@ -1,0 +1,7 @@
+2025-06-29 14:15:54 WARN Unsupported configuration: [caching, commit]
+2025-06-29 14:15:54 WARN Unsupported configuration in analyze: [location]
+2025-06-29 14:15:54 WARN Unsupported configuration in checkers section: [brakeman, audit, android-security, codexm]
+2025-06-29 14:15:55 WARN WARNING: check(er) FORWARD_NULL does not exist
+2025-06-29 14:15:55 WARN WARNING: check(er) COPY_PASTE_ERROR does not exist
+2025-06-29 14:15:55 WARN WARNING: check(er) UNREACHABLE does not exist
+2025-06-29 14:15:55 WARN WARNING: check(er) BAD_CERT_VERIFICATION does not exist

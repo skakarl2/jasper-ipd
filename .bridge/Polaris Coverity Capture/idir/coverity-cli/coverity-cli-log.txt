@@ -1,0 +1,202 @@
+[INFO] Using lightweight capture with thin client.
+[INFO] Executing command: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-internal-manage-cache check
+[INFO] Caching is enabled.
+[INFO] Executing command: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-manage-emit --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir create
+[INFO] Telemetry is enabled
+[INFO] Executing command: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-manage-emit --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir list-capture-diagnostics
+[INFO] Executing action Delete compiler configurations for intermediate directory 'C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir'
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler gcc --comptype gcc --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler cc --comptype gcc --template
+[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. 
+[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. 
+[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. 
+[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. 
+[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. 
+[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. 
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler c++ --comptype g++ --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler clang --comptype clangcc --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler java --comptype java --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler go --comptype go --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler ccache --comptype prefix --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler kotlinc --comptype kotlinc --template
+[WARNING] Template config template-java-config-0 already exists for java and will be reused. 
+[WARNING] Template config template-apt-config-0 already exists for apt and will be reused. 
+[WARNING] Template config template-javaw-config-0 already exists for javaw and will be reused. 
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler csc --comptype csc --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler vbc --comptype vbc --template
+[WARNING] Template config template-dotnet-config-0 already exists for dotnet and will be reused. 
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler cl --comptype msvc --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler i686-w64-mingw32-gcc --comptype gcc --template
+[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. 
+[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. 
+[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. 
+[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. 
+[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. 
+[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. 
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler i686-w64-mingw32-c++ --comptype g++ --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler mingw32-gcc --comptype gcc --template
+[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. 
+[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. 
+[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. 
+[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. 
+[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. 
+[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. 
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler mingw32-c++ --comptype g++ --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler x86_64-w64-mingw32-gcc --comptype gcc --template
+[WARNING] Template config template-gcc-config-1 already exists for gcc-* and will be reused. 
+[WARNING] Template config template-gcc-config-2 already exists for *-gcc and will be reused. 
+[WARNING] Template config template-g++-config-1 already exists for g++-* and will be reused. 
+[WARNING] Template config template-g++-config-2 already exists for *-g++ and will be reused. 
+[WARNING] Template config template-ld-config-0 already exists for ld and will be reused. 
+[WARNING] Template config template-ar-config-0 already exists for ar and will be reused. 
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml --compiler x86_64-w64-mingw32-c++ --comptype g++ --template
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --dart
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --javascript
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --php
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --python
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --ruby
+[INFO] Executing action Configure build compiler: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-configure -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --comptype capture-config-files --file-regex $capture-config-files$ --template
+[WARNING] Configuration already exists for file regex $capture-config-files$
+          and it will not be updated.
+[INFO] Loading compiler config 'C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\build-compiler-configs\coverity_config.xml'
+[INFO] Loading compiler config 'C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml'
+[INFO] Executing action Emit files using buildless capture: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-internal-capture-files --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir -c C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\buildless-compiler-configs\coverity_config.xml --ticker-mode none --append-log --capture-list-file C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir\coverity-cli\capture-file-list-791596431 --record-with-source
+[INFO] Buildless capture started.
+[INFO] Emitting 271 Files.
+[INFO] Buildless capture completed.
+[INFO] Executing action deleteResidualTUs C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir
+[INFO] Executing command: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-manage-emit --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir list-capture-diagnostics
+[INFO] Executing action Invalidate capture results
+[INFO] Executing action Invoke cov-run-sigma: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-run-sigma --project-dir C:\AI\jasper-ipd-1 --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir --coverity-config C:\Users\wangleo\AppData\Local\Temp\cov-run-sigma-config-2879624116\coverity.yaml --sigma-binary-path C:\Users\wangleo\.blackduck\bridge\tools\sigma\2025.4.0\sigma.exe --enable-telemetry
+cov-run-sigma version 2025.3.0 on Windows 11 Professional, 64-bit (build 26100)
+Internal version numbers: 393dab6634 p-2025.3-push-64
+
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/StreamRepo.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/GitHubUserClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/IssueRepo.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/V4/GitHubV4ProjectNextClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/script/win/make-installer.js
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/AppEvent.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/GitHubClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Main/asset/js/test.js
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/test/sample.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Infra/Event.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/GitHubNotificationClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Setup/StreamSetup.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/UserPrefEvent.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/detect-input.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/V4/GitHubV4IssueClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/GitHubQueryParser.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/DocsUtil.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/DatePolling.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/V4/GitHubV4Client.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/java/merge_sprt.java
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteVersionEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/DateUtil.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/SystemStreamMeClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Infra/Logger.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/ThemeNameEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemotePREntity.ts
+Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Main/Window/MiscWindow/MiscWindow.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/SystemStreamSubscriptionClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/script/mac/notarize.js
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/GetIssueStateEntity.ts
+Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/MainWindowBind.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/IPC/SQLiteIPC.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/highlight-and-scroll.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/UserAgentUtil.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/ColorUtil.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Style/color.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Window/MainWindow/MainWindowMenu.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/GARepo.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Style/layout.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/project-board.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/GitHubSearchClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/VersionEvent.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/GitHubNotificationPolling.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/ShellUtil.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/BrowserViewBind.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/java/ll_test.java
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/show-diff-body.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/SystemStreamTeamClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/IssueEvent.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Main/Util/PathUtil.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/ForceUpdateIssuePolling.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/JumpNavigationHistoryEntity.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/StreamClient.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/UserPrefBind.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV4/RemoteGitHubV4ViewerEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Infra/fetchw.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/VersionPolling.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemoteGitHubNotification.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/JumpNavigationHistoryRepo.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamPolling.ts
+Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/StreamBind.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/GitHubUtil.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/FilterHistoryEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Style/appTheme.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Setup/DBSetup.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Main/sort.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV4/RemoteGitHubV4IssueNodesEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/FilterSQLRepo.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/StreamIssueEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV4/RemoteGitHubV4Entity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/StreamEvent.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RepositoryEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/IPC/IssueIPC.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/ArrayUtil.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/BrowserViewTranslate.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemoteUserWatchingEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/GitHub/GitHubIssueClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/SubscriptionIssueEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/SystemStreamWatchingClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/TimerUtil.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/update-by-self.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/script/leo_demo_customer01.php
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/asset/html/main-window-preload.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/asset/html/issue-window-preload.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/SubscriptionIssuesRepo.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemoteUserTeamEntity.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/UserPrefRepo.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Main/Util/testipd.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/external-browser.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/coverity.yaml
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV4/RemoteGitHubV4ProjectEntity.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/IPC/BrowserViewIPC.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/get-issue-state.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Util/PlatformUtil.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Window/MainWindow/MainWindowEvent.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Browser/BrowserFragmentAsset/project-next-board.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/UserPrefEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/FilterHistoryRepo.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/DateEvent.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/IssueEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Infra/DB.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/IPC/UserPrefIPC.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/IPC/StreamIPC.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Window/MainWindow/MainWindow.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/StreamEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/GitHubQueryType.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Main/asset/js/context-menu.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemoteIssueEntity.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Library/Type/RemoteGitHubV3/RemoteGitHubHeaderEntity.ts
+Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/IssueBind.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/StreamIssueRepo.ts
+Detected windows-1252 encoding for C:/AI/jasper-ipd-1/src/Renderer/Fragment/Stream/SampleIconNames.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/index.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Renderer/Repository/Polling/StreamClient/ProjectStreamClient.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/IPC/MainWindowIPC.ts
+Detected ISO-8859-1 encoding for C:/AI/jasper-ipd-1/src/Renderer/Event/BrowserEvent.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Window/MainWindow/MainWindowTranslate.ts
+Detected UTF-8 encoding for C:/AI/jasper-ipd-1/src/Main/Bind/SQLiteBind.ts
+[INFO] Executing action Action cleanup: Coverity configuration for Sigma
+[INFO] Executing command: C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\cov-manage-emit --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir list-capture-diagnostics
+Capture summary:
+    SUCCEEDED: 277
+    INCOMPLETE: 0
+    FAILED: 14
+    IGNORED: 16
+    FILES CAPTURED: 277
+    LINES OF CODE: 30945
+[INFO] Capture phase took 32.774s.
+[INFO] To analyze your project, type 'C:\Users\wangleo\.blackduck\bridge\tools\cov-thin-client\2025.3.0\bin\coverity.exe analyze --dir C:\AI\jasper-ipd-1\.bridge\Polaris Coverity Capture\idir -o analyze.location=connect'.
