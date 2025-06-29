@@ -23,7 +23,7 @@ analyze:
         enabled: false
       UNREACHABLE:
         enabled: false
-     # HARDCODED_CREDENTIALS:
+     ## HARDCODED_CREDENTIALS:
       SIGMA.hardcoded_secret:
         enabled: false
       COPY_PASTE_ERROR:
