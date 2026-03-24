@@ -4,10 +4,10 @@ def solve_n_queens(n):
     Each solution is represented as a list of column indices for each row.
     """
     def is_safe(queens, row, col):
-        for r, c in enumerate(queens):
-            if c == col or abs(row - r) == abs(col - c):
-                return False
-        return True
+        return all(
+            col != c and abs(row - r) != abs(col - c)
+            for r, c in enumerate(queens)
+        )
 
     def backtrack(row, queens, solutions):
         if row == n:
