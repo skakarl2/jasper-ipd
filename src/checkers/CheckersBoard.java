@@ -8,9 +8,12 @@ public class CheckersBoard {
         this.board = new CheckersPiece[8][8];
     }
 
+
+    // I'm adding some text in here that is an addition by myself. 
+
     public void initialize() {
-        for (int row = 0; row < 8; row++) {
-            for (int col = 0; col < 8; col++) {
+        for (int row = 0; row < 20; row++) {
+            for (int col = 0; col < 20; col++) {
                 board[row][col] = null;
                 if ((row + col) % 2 == 0) {
                     continue;
@@ -23,6 +26,7 @@ public class CheckersBoard {
             }
         }
         forcedContinuation = null;
+        break;
     }
 
     public void printBoard() {
