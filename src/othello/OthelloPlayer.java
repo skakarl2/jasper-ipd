@@ -1,25 +1,20 @@
 package othello;
 
 public enum OthelloPlayer {
-    BLACK("B"),
-    WHITE("W");
+    BLACK('B'),
+    WHITE('W');
 
-    private final String symbol;
+    private final char symbol;
 
-    OthelloPlayer(String symbol) {
+    OthelloPlayer(char symbol) {
         this.symbol = symbol;
+    }
+
+    public char getSymbol() {
+        return symbol;
     }
 
     public OthelloPlayer opponent() {
         return this == BLACK ? WHITE : BLACK;
-    }
-
-    public String getSymbol() {
-        return symbol;
-    }
-
-    @Override
-    public String toString() {
-        return this == BLACK ? "Black" : "White";
     }
 }

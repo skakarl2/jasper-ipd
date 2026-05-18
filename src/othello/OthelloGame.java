@@ -1,6 +1,5 @@
 package othello;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class OthelloGame {
@@ -8,76 +7,64 @@ public class OthelloGame {
         OthelloBoard board = new OthelloBoard();
         board.initialize();
 
+        System.out.println("Welcome to Othello!");
+        System.out.println("Enter moves like 'd3'. Type 'quit' to exit.\n");
+
         try (Scanner scanner = new Scanner(System.in)) {
             OthelloPlayer currentPlayer = OthelloPlayer.BLACK;
 
-            System.out.println("Welcome to Othello!");
-            System.out.println("Enter a move like 'd3'. Type 'moves' to list legal moves, or 'quit' to exit.\n");
+            while (!board.isBoardFull()) {
+                boolean currentCanMove = board.hasAnyLegalMove(currentPlayer);
+                boolean opponentCanMove = board.hasAnyLegalMove(currentPlayer.opponent());
 
-            while (true) {
-                board.printBoard();
-                System.out.println();
-
-                if (board.isBoardFull() || (!board.hasAnyValidMove(OthelloPlayer.BLACK) && !board.hasAnyValidMove(OthelloPlayer.WHITE))) {
-                    System.out.println(board.winnerMessage());
+                if (!currentCanMove && !opponentCanMove) {
                     break;
                 }
 
-                if (!board.hasAnyValidMove(currentPlayer)) {
+                if (!currentCanMove) {
                     System.out.println(currentPlayer + " has no legal moves and must pass.\n");
                     currentPlayer = currentPlayer.opponent();
                     continue;
                 }
 
-                System.out.println(currentPlayer + " to move.");
-                System.out.println("Enter your move:");
+                board.printBoard();
+                System.out.println();
+                System.out.println("Score - BLACK: " + board.countPieces(OthelloPlayer.BLACK)
+                    + ", WHITE: " + board.countPieces(OthelloPlayer.WHITE));
+                System.out.println("Legal moves for " + currentPlayer + ": " + board.legalMovesSummary(currentPlayer));
+                System.out.println(currentPlayer + " to move:");
 
                 String input = scanner.nextLine().trim();
                 if (input.equalsIgnoreCase("quit")) {
                     System.out.println("Thanks for playing!");
-                    break;
-                }
-                if (input.equalsIgnoreCase("moves")) {
-                    List<OthelloPosition> moves = board.validMovesFor(currentPlayer);
-                    System.out.println("Legal moves: " + formatMoves(moves) + "\n");
-                    continue;
+                    return;
                 }
 
                 try {
                     OthelloPosition move = OthelloPosition.fromString(input);
-                    OthelloMoveResult result = board.playMove(move, currentPlayer);
-                    System.out.println(result.getMessage());
-                    System.out.println();
-
-                    if (!result.isSuccess()) {
-                        continue;
-                    }
-                    if (result.isGameOver()) {
-                        board.printBoard();
-                        break;
-                    }
-
+                    int flipped = board.playMove(move, currentPlayer);
+                    System.out.println(currentPlayer + " played " + move + " and flipped " + flipped + " piece"
+                        + (flipped == 1 ? "." : "s.") + "\n");
                     currentPlayer = currentPlayer.opponent();
                 } catch (IllegalArgumentException error) {
                     System.out.println(error.getMessage());
-                    System.out.println();
+                    System.out.println("Use a legal square like d3.\n");
                 }
             }
-        }
-    }
 
-    private static String formatMoves(List<OthelloPosition> moves) {
-        if (moves.isEmpty()) {
-            return "none";
-        }
+            board.printBoard();
+            int blackCount = board.countPieces(OthelloPlayer.BLACK);
+            int whiteCount = board.countPieces(OthelloPlayer.WHITE);
+            System.out.println();
+            System.out.println("Final score - BLACK: " + blackCount + ", WHITE: " + whiteCount);
 
-        StringBuilder builder = new StringBuilder();
-        for (int index = 0; index < moves.size(); index++) {
-            if (index > 0) {
-                builder.append(", ");
+            if (blackCount > whiteCount) {
+                System.out.println("BLACK wins!");
+            } else if (whiteCount > blackCount) {
+                System.out.println("WHITE wins!");
+            } else {
+                System.out.println("The game is a draw!");
             }
-            builder.append(moves.get(index));
         }
-        return builder.toString();
     }
 }
