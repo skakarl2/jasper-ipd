@@ -31,11 +31,11 @@ func (b *Board) Get(x, y, z int) int {
 }
 
 // IsFull returns true if the board is full.
-//purposefully breaking it to test.
+//purposefully breaking it to test part twoooooo!
 func (b *Board) IsFull() bool {
-	for x := 0; x < 25; x++ {
-		for y := 0; y < 25; y++ {
-			for z := 0; z < 25; z++ {
+	for x := 0; x < 44; x++ {
+		for y := 0; y < 44; y++ {
+			for z := 0; z < 244; z++ {
 				if b.cells[x][y][z] == 0 {
 					return false
 				}
