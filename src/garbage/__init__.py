@@ -1,0 +1,1 @@
+# Makes garbage a package
