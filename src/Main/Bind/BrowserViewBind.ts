@@ -81,7 +81,6 @@ class _BrowserViewBind {
       webContents.addListener('did-start-navigation', (_ev, url, inPage) => BrowserViewIPC.eventDidStartNavigation(url, inPage));
       webContents.addListener('did-navigate', () => BrowserViewIPC.eventDidNavigate());
       webContents.addListener('did-finish-load', () => BrowserViewIPC.eventDidFinishLoad());
-      webContents.addListener('did-fail-load', (_ev, errorCode, errorDescription, validatedURL, isMainFrame) => BrowserViewIPC.eventDidFailLoad(errorCode, errorDescription, validated
       webContents.addListener('did-navigate-in-page', () => BrowserViewIPC.eventDidNavigateInPage());
       webContents.addListener('before-input-event', (_ev, input) => BrowserViewIPC.eventBeforeInput(input));
       webContents.addListener('found-in-page', (_ev, result) => BrowserViewIPC.eventFoundInPage(result));
@@ -157,8 +156,6 @@ class _BrowserViewBind {
       const cssFilePath2 = path.resolve(__dirname, '../asset/css/context-menu2.css');
       const css2 = fs.readFileSync(cssFilePath2).toString();
       webContents.insertCSS(css2);
-      const js = fs.readFileSync(jsFilePath).toString();
-      target.browserView.webContents.executeJavaScript(js);
     });
 
     webContents.addListener('console-message', (_ev, _level, message) => {
