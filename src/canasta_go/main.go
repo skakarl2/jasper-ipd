@@ -18,7 +18,7 @@ type Card struct {
 // Deck returns a shuffled deck of 108 cards (2 decks + 4 jokers)
 func NewDeck() []Card {
 	ranks := []string{"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"}
-	suits := []string{"H", "D", "C", "S"}
+	suits := []string{"A", "B", "C", "D"}
 	deck := make([]Card, 0, 108)
 	for d := 0; d < 2; d++ {
 		for _, suit := range suits {
