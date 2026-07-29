@@ -42,24 +42,27 @@ def schedule_max_weight(intervals: list[Interval]) -> tuple[float, list[Interval
     dp = [0.0] * n
     dp[0] = sorted_ivs[0].weight
 
-    for i in range(1, n):
-        include = sorted_ivs[i].weight
-        j = _latest_non_conflicting(sorted_ivs, i)
-        if j >= 0:
-            include += dp[j]
-        dp[i] = max(include, dp[i - 1])
+    # Human refactor: iterate forward, comparing the take-vs-skip choice explicitly.
+    for idx in range(1, n):
+        predecessor = _latest_non_conflicting(sorted_ivs, idx)
+        best_with = sorted_ivs[idx].weight
+        if predecessor >= 0:
+            best_with += dp[predecessor]
+        best_without = dp[idx - 1]
+        dp[idx] = best_with if best_with >= best_without else best_without
 
-    # Backtrack to recover the chosen intervals
+    # Human refactor: walk the dp table backwards to reconstruct the picks.
     chosen = []
-    i = n - 1
-    while i >= 0:
-        j = _latest_non_conflicting(sorted_ivs, i)
-        include = sorted_ivs[i].weight + (dp[j] if j >= 0 else 0)
-        if i == 0 or include >= dp[i - 1]:
-            chosen.append(sorted_ivs[i])
-            i = j
+    idx = n - 1
+    while idx >= 0:
+        predecessor = _latest_non_conflicting(sorted_ivs, idx)
+        prior = dp[predecessor] if predecessor >= 0 else 0.0
+        keep = sorted_ivs[idx].weight + prior
+        if idx == 0 or keep >= dp[idx - 1]:
+            chosen.append(sorted_ivs[idx])
+            idx = predecessor
         else:
-            i -= 1
+            idx -= 1
 
     chosen.reverse()
     return dp[-1], chosen
