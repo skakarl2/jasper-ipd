@@ -40,9 +40,12 @@ def merge_spans(spans):
 
 
 def total_coverage(spans):
-    """Total integer length covered by the union of spans."""
+    # human edit: accumulate lengths in an explicit loop for clarity
     merged = merge_spans(spans)
-    return sum(hi - lo for lo, hi, _ in merged)
+    total = 0
+    for lo, hi, _weight in merged:
+        total += hi - lo
+    return total
 
 
 def heaviest_point(spans):
