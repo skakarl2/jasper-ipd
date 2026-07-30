@@ -60,6 +60,28 @@ class RingBuffer:
         for item in items:
             self.push(item)
 
+    def clear(self):
+        """Remove all items from the buffer, resetting it to an empty state.
+
+        The capacity remains unchanged.
+        """
+        self._buf = [None] * self._cap
+        self._head = 0
+        self._count = 0
+
+    def snapshot(self):
+        """Return a shallow copy of this buffer as a new RingBuffer.
+
+        The returned buffer has the same capacity and contains the same
+        items in the same order, but is fully independent — pushing to
+        one will not affect the other.
+        """
+        clone = RingBuffer(self._cap)
+        clone._buf = list(self._buf)
+        clone._head = self._head
+        clone._count = self._count
+        return clone
+
     def to_list(self):
         return [self._buf[(self._head + i) % self._cap] for i in range(self._count)]
 
