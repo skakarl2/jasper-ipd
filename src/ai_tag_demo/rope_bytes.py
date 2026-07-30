@@ -56,11 +56,14 @@ class _Node:
 
 
 def _node_len(node: _Node | None) -> int:
+    # human edit: explicit guard clauses
     if node is None:
         return 0
     if node.is_leaf:
-        return len(node.text)  # type: ignore[arg-type]
-    return node.weight + _node_len(node.right)
+        assert node.text is not None
+        return len(node.text)
+    right_len = _node_len(node.right)
+    return node.weight + right_len
 
 
 def _node_index(node: _Node, i: int) -> str:
