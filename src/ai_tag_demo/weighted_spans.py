@@ -113,6 +113,62 @@ def weighted_gaps(spans, lo, hi):
     return gaps
 
 
+def intersect_spans(a, b):
+    """Return overlapping regions between two span lists with combined weights.
+
+    Uses a sweep-line over interval endpoints to find every sub-interval
+    where at least one span from `a` and at least one from `b` are both
+    active. The weight for each output region is the sum of all active
+    weights from both lists at that point.
+
+    Parameters
+    ----------
+    a, b : list of Span
+        Two collections of weighted intervals.
+
+    Returns
+    -------
+    list of (lo, hi, combined_weight) tuples, sorted by lo, covering
+    exactly the portions of the number line where both lists contribute
+    at least one span.
+    """
+    START, END = 0, 1
+
+    events = []
+    for s in a:
+        events.append((s.lo, START, 0, s.weight))
+        events.append((s.hi, END, 0, s.weight))
+    for s in b:
+        events.append((s.lo, START, 1, s.weight))
+        events.append((s.hi, END, 1, s.weight))
+
+    events.sort(key=lambda e: (e[0], e[1]))
+
+    result = []
+    depth = [0, 0]
+    weight = [0.0, 0.0]
+    prev_pos = None
+
+    for pos, kind, side, w in events:
+        if prev_pos is not None and pos > prev_pos and depth[0] > 0 and depth[1] > 0:
+            combined = weight[0] + weight[1]
+            if result and result[-1][1] == prev_pos and result[-1][2] == combined:
+                result[-1] = (result[-1][0], pos, combined)
+            else:
+                result.append((prev_pos, pos, combined))
+
+        if kind == START:
+            depth[side] += 1
+            weight[side] += w
+        else:
+            depth[side] -= 1
+            weight[side] -= w
+
+        prev_pos = pos
+
+    return result
+
+
 if __name__ == "__main__":
     demo = [Span(0, 5, 1.0), Span(3, 8, 2.0), Span(10, 12, 0.5)]
     print("merged:", merge_spans(demo))
