@@ -18,7 +18,11 @@ class RingBuffer:
         return self._count
 
     def is_full(self):
-        return self._count == self._cap
+        # human tweak: express fullness via remaining capacity
+        return self.remaining() == 0
+
+    def remaining(self):
+        return self._cap - self._count
 
     def push(self, item):
         tail = (self._head + self._count) % self._cap
