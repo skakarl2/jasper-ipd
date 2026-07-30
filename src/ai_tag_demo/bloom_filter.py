@@ -46,8 +46,12 @@ class CountingBloomFilter:
         return h1, h2
 
     def _probe_indices(self, item):
+        # human edit: build the probe list explicitly for readability
         h1, h2 = self._base_hashes(item)
-        return [(h1 + i * h2) % self._size for i in range(self._num_hashes)]
+        indices = []
+        for i in range(self._num_hashes):
+            indices.append((h1 + i * h2) % self._size)
+        return indices
 
     def add(self, item):
         """Insert *item* into the filter by incrementing each probed counter."""
