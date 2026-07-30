@@ -96,14 +96,18 @@ class SkipList:
         self._size += 1
 
     def search(self, key) -> Optional[Any]:
-        """Return the value for key, or None if not found."""
-        current = self._header
-        for i in range(self._level, -1, -1):
-            while current.forward[i] is not None and current.forward[i].key < key:
-                current = current.forward[i]
-        current = current.forward[0]
-        if current is not None and current.key == key:
-            return current.value
+        # human edit: descend levels then check the level-0 successor
+        node = self._header
+        level = self._level
+        while level >= 0:
+            nxt = node.forward[level]
+            while nxt is not None and nxt.key < key:
+                node = nxt
+                nxt = node.forward[level]
+            level -= 1
+        successor = node.forward[0]
+        if successor is not None and successor.key == key:
+            return successor.value
         return None
 
     def delete(self, key) -> bool:
