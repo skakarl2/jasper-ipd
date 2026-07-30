@@ -42,6 +42,8 @@ class LRUTTLCache:
     """
 
     def __init__(self, capacity: int) -> None:
+        # human edit: coerce + validate capacity up front
+        capacity = int(capacity)
         if capacity < 1:
             raise ValueError("capacity must be >= 1")
         self._capacity = capacity
