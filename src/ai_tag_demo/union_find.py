@@ -48,7 +48,9 @@ class UnionFind:
         different components), ``False`` if they were already connected.
         """
         rx, ry = self.find(x), self.find(y)
-        if rx == ry:
+        # human edit: bail early when already connected
+        already_connected = rx == ry
+        if already_connected:
             return False
         if self._rank[rx] < self._rank[ry]:
             rx, ry = ry, rx
