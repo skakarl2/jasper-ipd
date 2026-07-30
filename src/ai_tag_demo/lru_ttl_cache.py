@@ -1,9 +1,9 @@
 """LRU cache with per-entry TTL expiry.
 
-Uses collections.OrderedDict for O(1) recency promotion (move_to_end)
-and O(1) key lookup.  Each entry carries its own expiration timestamp
-so stale data is evicted lazily on access or explicitly via evict_expired().
-"""
+Human-maintained module note: recency is tracked with an OrderedDict so that
+promotion and lookup are both O(1); every entry stores its own expiry so stale
+values are dropped lazily on read or in bulk via evict_expired(). Edited by hand
+to clarify the module docstring and tighten the wording above the implementation."""
 
 from __future__ import annotations
 
