@@ -82,6 +82,35 @@ class RingBuffer:
         clone._count = self._count
         return clone
 
+    def as_generator(self):
+        """Yield items from oldest to newest without copying.
+
+        Lazily walks the internal circular storage, yielding one item
+        at a time in insertion order.  The buffer must not be mutated
+        while the generator is being consumed.
+        """
+        for i in range(self._count):
+            yield self._buf[(self._head + i) % self._cap]
+
+    def resize(self, new_capacity):
+        """Change the buffer capacity, preserving contents.
+
+        If *new_capacity* is smaller than the current item count, the
+        oldest items are silently dropped so that the remaining items
+        fit.  Raises ValueError if *new_capacity* is not positive.
+        """
+        if new_capacity <= 0:
+            raise ValueError("capacity must be positive")
+        items = self.to_list()
+        if len(items) > new_capacity:
+            items = items[len(items) - new_capacity:]
+        self._cap = new_capacity
+        self._buf = [None] * new_capacity
+        self._head = 0
+        self._count = len(items)
+        for i, item in enumerate(items):
+            self._buf[i] = item
+
     def to_list(self):
         return [self._buf[(self._head + i) % self._cap] for i in range(self._count)]
 
