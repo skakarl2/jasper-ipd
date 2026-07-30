@@ -117,7 +117,32 @@ class LRUTTLCache:
     def __len__(self) -> int:
         return len(self._data)
 
+    def peek(self, key: Hashable) -> Any | None:
+        """Return the value for *key* without updating recency or expiry.
+
+        Unlike :meth:`get`, a successful lookup does **not** promote the
+        entry to most-recently-used and does **not** count as a hit or
+        miss in the stats counters.  Expired entries are still removed
+        lazily (and counted as evictions) so the cache stays consistent.
+
+        Returns ``None`` when *key* is absent or expired.
+        """
+        entry = self._data.get(key)
+        if entry is None:
+            return None
+        if time.monotonic() >= entry.expires_at:
+            del self._data[key]
+            self._stats.evictions += 1
+            return None
+        return entry.value
+
     def __contains__(self, key: Hashable) -> bool:
+        """Check whether *key* is present **and** not expired.
+
+        Supports the ``in`` operator (``key in cache``).  Expired entries
+        are removed lazily on check and counted as evictions, but the
+        operation never promotes recency.
+        """
         entry = self._data.get(key)
         if entry is None:
             return False
