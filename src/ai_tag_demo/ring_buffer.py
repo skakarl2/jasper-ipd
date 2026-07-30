@@ -39,6 +39,23 @@ class RingBuffer:
         self._count -= 1
         return item
 
+    def peek(self):
+        """Return the oldest item without removing it.
+
+        Raises IndexError if the buffer is empty.
+        """
+        if self._count == 0:
+            raise IndexError("peek at empty ring buffer")
+        return self._buf[self._head]
+
+    def extend(self, items):
+        """Push each element of *items* into the buffer in order.
+
+        Uses the same overwrite-on-full semantics as :meth:`push`.
+        """
+        for item in items:
+            self.push(item)
+
     def to_list(self):
         return [self._buf[(self._head + i) % self._cap] for i in range(self._count)]
 
