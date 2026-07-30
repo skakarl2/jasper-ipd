@@ -59,9 +59,10 @@ class CountingBloomFilter:
     # ------------------------------------------------------------------ #
 
     def add(self, item) -> None:
-        """Insert *item* by incrementing each probed counter."""
+        # human edit: guard against counter overflow at 255 (byte ceiling)
         for pos in self._probe_positions(item):
-            self._counters[pos] += 1
+            if self._counters[pos] < 255:
+                self._counters[pos] += 1
         self._insertions += 1
 
     def remove(self, item) -> None:
