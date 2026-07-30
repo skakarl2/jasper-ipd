@@ -1,13 +1,13 @@
-"""Counting Bloom filter with double hashing and removal support.
+"""Counting Bloom filter with double-hashing and removal support.
 
 A space-efficient probabilistic set that uses integer counters instead of
-single bits, allowing both insertion and deletion. False positives are
+single bits, enabling both insertion and deletion. False positives are
 possible; false negatives are not (assuming no counter underflow from
 removing items that were never added).
 
-Double hashing combines two independent base hashes to produce k probe
-positions: h(i) = (h1 + i * h2) mod m, avoiding the cost of k separate
-hash computations.
+Double hashing synthesises k probe positions from two base hashes:
+    h(i) = (h1 + i * h2) mod m
+avoiding the cost of k independent hash computations.
 """
 
 import hashlib
@@ -20,145 +20,170 @@ class CountingBloomFilter:
 
     Parameters
     ----------
-    size : int
-        Number of counter slots (m). Larger values reduce false-positive rate.
-    num_hashes : int
-        Number of hash functions (k) synthesised via double hashing.
+    capacity : int
+        Number of counter slots (m). Larger values reduce the
+        false-positive rate.
+    hash_count : int
+        Number of hash probes (k) synthesised via double hashing.
     """
 
-    def __init__(self, size, num_hashes):
-        # human edit: validate then store config compactly
-        if size <= 0:
-            raise ValueError("size must be positive")
-        if num_hashes <= 0:
-            raise ValueError("num_hashes must be positive")
-        self._size = int(size)
-        self._num_hashes = int(num_hashes)
-        self._counters = bytearray(size)
-        self._item_count = 0
+    def __init__(self, capacity: int, hash_count: int) -> None:
+        if capacity <= 0:
+            raise ValueError("capacity must be positive")
+        if hash_count <= 0:
+            raise ValueError("hash_count must be positive")
+        self._capacity = int(capacity)
+        self._hash_count = int(hash_count)
+        self._counters = bytearray(self._capacity)
+        self._insertions = 0
 
-    def _base_hashes(self, item):
+    # ------------------------------------------------------------------ #
+    #  Hashing
+    # ------------------------------------------------------------------ #
+
+    def _probe_positions(self, item) -> list[int]:
+        """Return the k counter indices for *item* via double hashing.
+
+        Two independent digests (MD5 and SHA-1) are combined to produce
+        k positions without computing k separate hashes.
+        """
         raw = str(item).encode("utf-8")
         h1 = struct.unpack("<Q", hashlib.md5(raw).digest()[:8])[0]
         h2 = struct.unpack("<Q", hashlib.sha1(raw).digest()[:8])[0]
-        if h2 % self._size == 0:
+        if h2 % self._capacity == 0:
             h2 += 1
-        return h1, h2
+        return [(h1 + i * h2) % self._capacity for i in range(self._hash_count)]
 
-    def _probe_indices(self, item):
-        # human edit: build the probe list explicitly for readability
-        h1, h2 = self._base_hashes(item)
-        indices = []
-        for i in range(self._num_hashes):
-            indices.append((h1 + i * h2) % self._size)
-        return indices
+    # ------------------------------------------------------------------ #
+    #  Core API
+    # ------------------------------------------------------------------ #
 
-    def add(self, item):
-        """Insert *item* into the filter by incrementing each probed counter."""
-        for idx in self._probe_indices(item):
-            self._counters[idx] += 1
-        self._item_count += 1
+    def add(self, item) -> None:
+        """Insert *item* by incrementing each probed counter."""
+        for pos in self._probe_positions(item):
+            self._counters[pos] += 1
+        self._insertions += 1
 
-    def remove(self, item):
+    def remove(self, item) -> None:
         """Remove *item* by decrementing each probed counter.
 
-        Raises ``KeyError`` if any probed counter is already zero, which
-        indicates the item was never added (or was already removed).
+        Raises ``KeyError`` if any probed counter is already zero,
+        indicating the item was never added (or was already removed).
         """
-        indices = self._probe_indices(item)
-        for idx in indices:
-            if self._counters[idx] <= 0:
+        positions = self._probe_positions(item)
+        for pos in positions:
+            if self._counters[pos] == 0:
                 raise KeyError(f"{item!r} is not present in the filter")
-        for idx in indices:
-            self._counters[idx] -= 1
-        self._item_count -= 1
+        for pos in positions:
+            self._counters[pos] -= 1
+        self._insertions -= 1
 
-    def contains(self, item):
+    def contains(self, item) -> bool:
         """Return ``True`` if *item* is probably in the set, ``False`` if definitely not."""
-        return all(self._counters[idx] > 0 for idx in self._probe_indices(item))
+        return all(self._counters[pos] > 0 for pos in self._probe_positions(item))
 
-    def current_false_positive_rate(self):
+    # ------------------------------------------------------------------ #
+    #  Analytics
+    # ------------------------------------------------------------------ #
+
+    def estimated_count(self) -> float:
+        """Approximate the number of distinct items via the zero-counter method.
+
+        Uses the inverse Bloom-fill formula:
+            n_hat = -(m / k) * ln(zeros / m)
+        Falls back to the raw insertion count when every counter is
+        non-zero (the log term would be undefined).
+        """
+        zeros = self._counters.count(0)
+        if zeros == 0:
+            return self._insertions
+        return -(self._capacity / self._hash_count) * math.log(zeros / self._capacity)
+
+    def current_false_positive_rate(self) -> float:
         """Estimate the current false-positive probability.
 
-        Uses the standard approximation:  (1 - e^(-k*n/m))^k
-        where k = num_hashes, n = items inserted, m = size.
+        Standard approximation: (1 - e^(-k*n/m))^k
         """
-        if self._item_count == 0:
+        if self._insertions == 0:
             return 0.0
-        exponent = -self._num_hashes * self._item_count / self._size
-        return (1.0 - math.exp(exponent)) ** self._num_hashes
+        exponent = -self._hash_count * self._insertions / self._capacity
+        return (1.0 - math.exp(exponent)) ** self._hash_count
 
-    def union(self, other):
-        """Return a new filter whose counters are the element-wise sum of two filters.
+    # ------------------------------------------------------------------ #
+    #  Set operations
+    # ------------------------------------------------------------------ #
 
-        Both filters must share the same size and hash configuration so that
-        probe indices are consistent. The resulting filter behaves as if every
-        item added to either operand had been added to the result.
+    def union(self, other: "CountingBloomFilter") -> "CountingBloomFilter":
+        """Return a new filter whose counters are the element-wise sum.
 
-        Raises ``ValueError`` if size or num_hashes differ between operands.
+        Both operands must share the same capacity and hash_count so
+        probe positions are consistent.
         """
-        if self._size != other._size or self._num_hashes != other._num_hashes:
-            raise ValueError(
-                "Cannot union filters with different size or num_hashes"
-            )
-        merged = CountingBloomFilter(self._size, self._num_hashes)
-        for i in range(self._size):
+        if self._capacity != other._capacity or self._hash_count != other._hash_count:
+            raise ValueError("Cannot union filters with different capacity or hash_count")
+        merged = CountingBloomFilter(self._capacity, self._hash_count)
+        for i in range(self._capacity):
             merged._counters[i] = self._counters[i] + other._counters[i]
-        merged._item_count = self._item_count + other._item_count
+        merged._insertions = self._insertions + other._insertions
         return merged
 
-    def estimated_count(self):
-        """Approximate the number of distinct items in the filter.
+    # ------------------------------------------------------------------ #
+    #  Dunder helpers
+    # ------------------------------------------------------------------ #
 
-        Derives the estimate from the fraction of zero-valued counters using
-        the inverse of the standard Bloom-fill formula:
+    def __len__(self) -> int:
+        return self._insertions
 
-            n_hat = -(m / k) * ln(V / m)
-
-        where m = size, k = num_hashes, and V = number of counters still at
-        zero. When every counter is non-zero the formula is undefined, so we
-        fall back to the raw insertion count.
-        """
-        zero_count = self._counters.count(0)
-        if zero_count == 0:
-            return self._item_count
-        return -self._size / self._num_hashes * math.log(zero_count / self._size)
-
-    def __len__(self):
-        return self._item_count
-
-    def __contains__(self, item):
+    def __contains__(self, item) -> bool:
         return self.contains(item)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
-            f"CountingBloomFilter(size={self._size}, "
-            f"num_hashes={self._num_hashes}, items={self._item_count})"
+            f"CountingBloomFilter(capacity={self._capacity}, "
+            f"hash_count={self._hash_count}, items={self._insertions})"
         )
 
 
+# ---------------------------------------------------------------------- #
+#  Demo
+# ---------------------------------------------------------------------- #
+
 if __name__ == "__main__":
-    bf = CountingBloomFilter(size=1024, num_hashes=5)
+    bf = CountingBloomFilter(capacity=1024, hash_count=5)
 
-    words = ["apple", "banana", "cherry", "date", "elderberry"]
-    for w in words:
-        bf.add(w)
+    fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+    for fruit in fruits:
+        bf.add(fruit)
 
-    print(f"Filter: {bf}")
-    print(f"Estimated FP rate: {bf.current_false_positive_rate():.6f}")
+    print(f"Filter : {bf}")
+    print(f"Est. FP rate : {bf.current_false_positive_rate():.6f}")
+    print(f"Est. count   : {bf.estimated_count():.1f}")
     print()
 
-    for probe in ["apple", "banana", "fig", "grape", "cherry"]:
-        status = "probably yes" if probe in bf else "definitely no"
-        print(f"  contains({probe!r:>14}) -> {status}")
+    probes = ["apple", "banana", "fig", "grape", "cherry"]
+    for probe in probes:
+        verdict = "probably yes" if probe in bf else "definitely no"
+        print(f"  contains({probe!r:>14}) -> {verdict}")
 
     print()
     bf.remove("banana")
     print("After removing 'banana':")
-    print(f"  contains('banana') -> {'probably yes' if 'banana' in bf else 'definitely no'}")
+    in_filter = "probably yes" if "banana" in bf else "definitely no"
+    print(f"  contains('banana') -> {in_filter}")
     print(f"  items: {len(bf)}, FP rate: {bf.current_false_positive_rate():.6f}")
 
     print()
-    fp_hits = sum(1 for i in range(10_000) if f"nonexistent_{i}" in bf)
-    print(f"Empirical FP check: {fp_hits}/10000 false positives "
-          f"({fp_hits / 10_000:.4%})")
+    bf2 = CountingBloomFilter(capacity=1024, hash_count=5)
+    for item in ["fig", "grape", "honeydew"]:
+        bf2.add(item)
+    combined = bf.union(bf2)
+    print(f"Union filter : {combined}")
+    print(f"  contains('fig')   -> {'probably yes' if 'fig' in combined else 'definitely no'}")
+    print(f"  contains('apple') -> {'probably yes' if 'apple' in combined else 'definitely no'}")
+
+    print()
+    false_positives = sum(1 for i in range(10_000) if f"nonexistent_{i}" in bf)
+    print(
+        f"Empirical FP check: {false_positives}/10000 false positives "
+        f"({false_positives / 10_000:.4%})"
+    )
