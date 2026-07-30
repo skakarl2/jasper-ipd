@@ -270,6 +270,57 @@ class Rope:
         _collect_leaves(self._root, parts)
         return sum(len(s) for s in parts)
 
+    def substring(self, start: int, length: int) -> str:
+        """Extract a substring of *length* characters beginning at *start*.
+
+        Uses the rope's tree structure to avoid materialising the entire
+        string: splits the tree at *start*, then at *start + length*, and
+        collects only the leaves in the resulting middle subtree.
+
+        Both *start* and the effective end position are clamped to
+        [0, len(self)], so out-of-range values never raise.
+        """
+        total = len(self)
+        start = max(0, min(start, total))
+        end = max(start, min(start + length, total))
+        if start == end or self._root is None:
+            return ""
+        _, rest = _node_split(self._root, start)
+        if rest is None:
+            return ""
+        mid, _ = _node_split(rest, end - start)
+        if mid is None:
+            return ""
+        parts: list[str] = []
+        _collect_leaves(mid, parts)
+        return "".join(parts)
+
+    def split(self, index: int) -> tuple[Rope, Rope]:
+        """Split the rope at *index*, returning two new ropes.
+
+        The first rope contains characters [0, index) and the second
+        contains characters [index, len(self)).  The index is clamped
+        to [0, len(self)] so boundary values produce one empty rope
+        rather than raising.
+        """
+        total = len(self)
+        index = max(0, min(index, total))
+        if self._root is None or index == 0:
+            left = Rope()
+            right = Rope.__new__(Rope)
+            right._root = self._root
+            return left, right
+        if index == total:
+            left = Rope.__new__(Rope)
+            left._root = self._root
+            return left, Rope()
+        left_node, right_node = _node_split(self._root, index)
+        left = Rope.__new__(Rope)
+        left._root = left_node
+        right = Rope.__new__(Rope)
+        right._root = right_node
+        return left, right
+
     @property
     def depth(self) -> int:
         """Return the depth of the underlying tree."""
