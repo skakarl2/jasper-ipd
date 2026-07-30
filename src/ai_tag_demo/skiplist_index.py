@@ -40,6 +40,23 @@ class SkipList:
     def __len__(self) -> int:
         return self._size
 
+    def min_key(self) -> Optional[Any]:
+        """Return the smallest key in the skip list, or None if empty."""
+        first = self._header.forward[0]
+        if first is None:
+            return None
+        return first.key
+
+    def max_key(self) -> Optional[Any]:
+        """Return the largest key in the skip list, or None if empty."""
+        node = self._header
+        for level in range(self._level, -1, -1):
+            while node.forward[level] is not None:
+                node = node.forward[level]
+        if node is self._header:
+            return None
+        return node.key
+
     def _find_update(self, key) -> list[Optional[_Node]]:
         # Human rewrite: walk down levels collecting the rightmost node
         # whose forward pointer stays strictly left of `key`.
