@@ -71,6 +71,21 @@ class UnionFind:
         """Return the size of the component containing *x*."""
         return self._size[self.find(x)]
 
+    def groups(self) -> dict[Hashable, list[Hashable]]:
+        """Return a dict mapping each root to the list of members in its component."""
+        result: dict[Hashable, list[Hashable]] = {}
+        for element in self._parent:
+            root = self.find(element)
+            result.setdefault(root, []).append(element)
+        return result
+
+    def reset(self) -> None:
+        """Clear all components, restoring the structure to its initial empty state."""
+        self._parent.clear()
+        self._rank.clear()
+        self._size.clear()
+        self._components = 0
+
     def __len__(self) -> int:
         """Total number of tracked elements."""
         return len(self._parent)
