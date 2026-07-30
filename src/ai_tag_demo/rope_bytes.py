@@ -15,12 +15,17 @@ _FIB_CACHE: list[int] = [1, 2]
 
 def _fib_at_least(n: int) -> int:
     """Return the index of the smallest Fibonacci number >= n."""
+    # Human rewrite: grow the cache first, then binary-search the boundary.
     while _FIB_CACHE[-1] < n:
         _FIB_CACHE.append(_FIB_CACHE[-2] + _FIB_CACHE[-1])
-    for i, f in enumerate(_FIB_CACHE):
-        if f >= n:
-            return i
-    return len(_FIB_CACHE) - 1
+    lo, hi = 0, len(_FIB_CACHE) - 1
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if _FIB_CACHE[mid] >= n:
+            hi = mid
+        else:
+            lo = mid + 1
+    return lo
 
 
 class _Node:
