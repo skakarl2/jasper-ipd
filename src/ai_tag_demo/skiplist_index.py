@@ -114,6 +114,37 @@ class SkipList:
             current = current.forward[0]
         return results
 
+    def count_range(self, lo, hi) -> int:
+        """Return the number of keys k satisfying lo <= k <= hi.
+
+        Uses the skip list's upper levels to reach the start of the range
+        in O(log n), then walks the bottom level counting entries until
+        the key exceeds hi.  Total cost is O(log n + k) where k is the
+        count returned.
+        """
+        count = 0
+        current = self._header
+        for i in range(self._level, -1, -1):
+            while current.forward[i] is not None and current.forward[i].key < lo:
+                current = current.forward[i]
+        current = current.forward[0]
+        while current is not None and current.key <= hi:
+            count += 1
+            current = current.forward[0]
+        return count
+
+    def to_sorted_list(self) -> list[tuple[Any, Any]]:
+        """Return every (key, value) pair in ascending key order.
+
+        Walks the bottom-level linked list from head to tail in O(n).
+        """
+        result: list[tuple[Any, Any]] = []
+        current = self._header.forward[0]
+        while current is not None:
+            result.append((current.key, current.value))
+            current = current.forward[0]
+        return result
+
     def items(self) -> list[tuple[Any, Any]]:
         """Return all (key, value) pairs in sorted order."""
         return self.range_query(float("-inf"), float("inf"))
