@@ -1,32 +1,33 @@
 """LRU cache with per-entry TTL expiry.
 
-Uses a doubly-linked list for O(1) recency promotion and a dict for O(1)
-key lookup.  Each entry carries its own expiration timestamp so stale
-data is evicted lazily on access or explicitly via evict_expired().
+Uses collections.OrderedDict for O(1) recency promotion (move_to_end)
+and O(1) key lookup.  Each entry carries its own expiration timestamp
+so stale data is evicted lazily on access or explicitly via evict_expired().
 """
 
 from __future__ import annotations
 
 import time
+from collections import OrderedDict
+from dataclasses import dataclass, field
 from typing import Any, Hashable
 
 
-class _Node:
-    """Doubly-linked list node holding one cache entry."""
+@dataclass
+class _Entry:
+    """A single cache entry pairing a value with its expiration."""
 
-    __slots__ = ("key", "value", "expires_at", "prev", "next")
+    value: Any
+    expires_at: float
 
-    def __init__(
-        self,
-        key: Hashable,
-        value: Any,
-        expires_at: float,
-    ) -> None:
-        self.key = key
-        self.value = value
-        self.expires_at = expires_at
-        self.prev: _Node | None = None
-        self.next: _Node | None = None
+
+@dataclass
+class _Stats:
+    """Mutable hit/miss/eviction counters."""
+
+    hits: int = 0
+    misses: int = 0
+    evictions: int = 0
 
 
 class LRUTTLCache:
@@ -44,11 +45,8 @@ class LRUTTLCache:
         if capacity < 1:
             raise ValueError("capacity must be >= 1")
         self._capacity = capacity
-        self._map: dict[Hashable, _Node] = {}
-        self._head = _Node(None, None, 0.0)  # sentinel
-        self._tail = _Node(None, None, 0.0)  # sentinel
-        self._head.next = self._tail
-        self._tail.prev = self._head
+        self._data: OrderedDict[Hashable, _Entry] = OrderedDict()
+        self._stats = _Stats()
 
     # -- public API ----------------------------------------------------------
 
@@ -58,15 +56,18 @@ class LRUTTLCache:
         A hit promotes the entry to most-recently-used.  An expired entry
         is removed lazily on access.
         """
-        node = self._map.get(key)
-        if node is None:
+        entry = self._data.get(key)
+        if entry is None:
+            self._stats.misses += 1
             return None
-        if time.monotonic() >= node.expires_at:
-            self._remove_node(node)
-            del self._map[key]
+        if time.monotonic() >= entry.expires_at:
+            del self._data[key]
+            self._stats.evictions += 1
+            self._stats.misses += 1
             return None
-        self._move_to_front(node)
-        return node.value
+        self._data.move_to_end(key)
+        self._stats.hits += 1
+        return entry.value
 
     def put(self, key: Hashable, value: Any, ttl: float) -> None:
         """Insert or update *key* with *value* and a per-entry *ttl* in seconds.
@@ -78,76 +79,56 @@ class LRUTTLCache:
             raise ValueError("ttl must be > 0")
 
         now = time.monotonic()
-        existing = self._map.get(key)
-        if existing is not None:
-            existing.value = value
-            existing.expires_at = now + ttl
-            self._move_to_front(existing)
+
+        if key in self._data:
+            self._data[key].value = value
+            self._data[key].expires_at = now + ttl
+            self._data.move_to_end(key)
             return
 
-        if len(self._map) >= self._capacity:
-            self._evict_lru()
+        if len(self._data) >= self._capacity:
+            self._data.popitem(last=False)
+            self._stats.evictions += 1
 
-        node = _Node(key, value, now + ttl)
-        self._map[key] = node
-        self._push_front(node)
+        self._data[key] = _Entry(value=value, expires_at=now + ttl)
 
     def evict_expired(self) -> int:
         """Remove every expired entry and return how many were evicted."""
         now = time.monotonic()
-        victims = [k for k, n in self._map.items() if now >= n.expires_at]
-        for k in victims:
-            self._remove_node(self._map.pop(k))
-        return len(victims)
+        expired_keys = [k for k, e in self._data.items() if now >= e.expires_at]
+        for k in expired_keys:
+            del self._data[k]
+        self._stats.evictions += len(expired_keys)
+        return len(expired_keys)
+
+    def stats(self) -> dict[str, int]:
+        """Return a snapshot of cache performance counters.
+
+        Returns a dict with keys ``hits``, ``misses``, and ``evictions``.
+        """
+        return {
+            "hits": self._stats.hits,
+            "misses": self._stats.misses,
+            "evictions": self._stats.evictions,
+        }
 
     def __len__(self) -> int:
-        return len(self._map)
+        return len(self._data)
 
     def __contains__(self, key: Hashable) -> bool:
-        node = self._map.get(key)
-        if node is None:
+        entry = self._data.get(key)
+        if entry is None:
             return False
-        if time.monotonic() >= node.expires_at:
-            self._remove_node(node)
-            del self._map[key]
+        if time.monotonic() >= entry.expires_at:
+            del self._data[key]
+            self._stats.evictions += 1
             return False
         return True
 
     def keys(self) -> list[Hashable]:
         """Return non-expired keys ordered most- to least-recently-used."""
         self.evict_expired()
-        result: list[Hashable] = []
-        cur = self._head.next
-        while cur is not self._tail:
-            result.append(cur.key)
-            cur = cur.next
-        return result
-
-    # -- linked-list internals -----------------------------------------------
-
-    def _push_front(self, node: _Node) -> None:
-        after_head = self._head.next
-        self._head.next = node
-        node.prev = self._head
-        node.next = after_head
-        after_head.prev = node
-
-    def _remove_node(self, node: _Node) -> None:
-        node.prev.next = node.next
-        node.next.prev = node.prev
-        node.prev = None
-        node.next = None
-
-    def _move_to_front(self, node: _Node) -> None:
-        self._remove_node(node)
-        self._push_front(node)
-
-    def _evict_lru(self) -> None:
-        lru = self._tail.prev
-        if lru is self._head:
-            return
-        self._remove_node(lru)
-        del self._map[lru.key]
+        return list(reversed(self._data))
 
 
 if __name__ == "__main__":
@@ -167,6 +148,8 @@ if __name__ == "__main__":
     cache.put("e", 5, ttl=5.0)
     print(f"after get(b)+put(e): keys={cache.keys()}  ('c' evicted; 'b' was promoted)")
 
+    print(f"\nstats so far: {cache.stats()}")
+
     cache2 = LRUTTLCache(capacity=5)
     cache2.put("x", 10, ttl=0.3)
     cache2.put("y", 20, ttl=5.0)
@@ -176,6 +159,8 @@ if __name__ == "__main__":
     print(f"               'x' in cache2 = {'x' in cache2}")
     print(f"               get('y') = {cache2.get('y')}  (still alive)")
 
+    print(f"\ncache2 stats:  {cache2.stats()}")
+
     cache3 = LRUTTLCache(capacity=10)
     for i in range(5):
         cache3.put(f"k{i}", i, ttl=0.2)
@@ -184,5 +169,6 @@ if __name__ == "__main__":
     time.sleep(0.25)
     n = cache3.evict_expired()
     print(f"after sweep:   evicted={n}, len={len(cache3)}, keys={cache3.keys()}")
+    print(f"cache3 stats:  {cache3.stats()}")
 
     print("\ndone.")
