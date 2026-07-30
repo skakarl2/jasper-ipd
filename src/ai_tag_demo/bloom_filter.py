@@ -80,8 +80,11 @@ class CountingBloomFilter:
         self._insertions -= 1
 
     def contains(self, item) -> bool:
-        """Return ``True`` if *item* is probably in the set, ``False`` if definitely not."""
-        return all(self._counters[pos] > 0 for pos in self._probe_positions(item))
+        # human edit: explicit loop, short-circuit on first empty counter
+        for pos in self._probe_positions(item):
+            if self._counters[pos] == 0:
+                return False
+        return True
 
     # ------------------------------------------------------------------ #
     #  Analytics
