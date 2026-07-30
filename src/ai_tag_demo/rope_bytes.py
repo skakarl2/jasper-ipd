@@ -257,6 +257,16 @@ class Rope:
         rope._root = _build_balanced(merged, 0, len(merged) - 1)
         return rope
 
+    def char_count(self) -> int:
+        """Return the total number of characters stored in the rope.
+
+        Walks every leaf node and sums their text lengths, giving an
+        accurate count even when the tree contains empty interior nodes.
+        """
+        parts: list[str] = []
+        _collect_leaves(self._root, parts)
+        return sum(len(s) for s in parts)
+
     @property
     def depth(self) -> int:
         """Return the depth of the underlying tree."""
