@@ -84,6 +84,42 @@ class CountingBloomFilter:
         exponent = -self._num_hashes * self._item_count / self._size
         return (1.0 - math.exp(exponent)) ** self._num_hashes
 
+    def union(self, other):
+        """Return a new filter whose counters are the element-wise sum of two filters.
+
+        Both filters must share the same size and hash configuration so that
+        probe indices are consistent. The resulting filter behaves as if every
+        item added to either operand had been added to the result.
+
+        Raises ``ValueError`` if size or num_hashes differ between operands.
+        """
+        if self._size != other._size or self._num_hashes != other._num_hashes:
+            raise ValueError(
+                "Cannot union filters with different size or num_hashes"
+            )
+        merged = CountingBloomFilter(self._size, self._num_hashes)
+        for i in range(self._size):
+            merged._counters[i] = self._counters[i] + other._counters[i]
+        merged._item_count = self._item_count + other._item_count
+        return merged
+
+    def estimated_count(self):
+        """Approximate the number of distinct items in the filter.
+
+        Derives the estimate from the fraction of zero-valued counters using
+        the inverse of the standard Bloom-fill formula:
+
+            n_hat = -(m / k) * ln(V / m)
+
+        where m = size, k = num_hashes, and V = number of counters still at
+        zero. When every counter is non-zero the formula is undefined, so we
+        fall back to the raw insertion count.
+        """
+        zero_count = self._counters.count(0)
+        if zero_count == 0:
+            return self._item_count
+        return -self._size / self._num_hashes * math.log(zero_count / self._size)
+
     def __len__(self):
         return self._item_count
 
