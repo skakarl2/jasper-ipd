@@ -131,6 +131,36 @@ class CountingBloomFilter:
         merged._insertions = self._insertions + other._insertions
         return merged
 
+    def jaccard_similarity(self, other: "CountingBloomFilter") -> float:
+        """Estimate Jaccard similarity J(A, B) = |A ∩ B| / |A ∪ B| from counters.
+
+        Compares two counting Bloom filters slot-by-slot, using the
+        min/max relationship between intersection and union sizes:
+
+            J ≈ Σ min(c_a[i], c_b[i]) / Σ max(c_a[i], c_b[i])
+
+        This is the generalised (counting) form of the bitwise Jaccard
+        estimator, equivalent to the MinHash intuition applied directly
+        to counter vectors.
+
+        Both filters must share the same capacity and hash_count so that
+        probe positions are consistent.  Returns 1.0 when both filters
+        are empty (trivially identical sets).
+        """
+        if self._capacity != other._capacity or self._hash_count != other._hash_count:
+            raise ValueError(
+                "Cannot compare filters with different capacity or hash_count"
+            )
+        sum_min = 0
+        sum_max = 0
+        for i in range(self._capacity):
+            a, b = self._counters[i], other._counters[i]
+            sum_min += a if a < b else b
+            sum_max += a if a > b else b
+        if sum_max == 0:
+            return 1.0
+        return sum_min / sum_max
+
     # ------------------------------------------------------------------ #
     #  Dunder helpers
     # ------------------------------------------------------------------ #
