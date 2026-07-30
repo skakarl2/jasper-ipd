@@ -76,8 +76,9 @@ class SkipList:
         """Insert a key-value pair, replacing the value if the key exists."""
         update = self._find_update(key)
         candidate = update[0].forward[0]
-
-        if candidate is not None and candidate.key == key:
+        # human edit: early-return on update to avoid re-inserting an existing key
+        key_exists = candidate is not None and candidate.key == key
+        if key_exists:
             candidate.value = value
             return
 
