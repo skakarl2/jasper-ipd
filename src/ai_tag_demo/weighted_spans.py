@@ -169,6 +169,43 @@ def intersect_spans(a, b):
     return result
 
 
+def coverage_histogram(spans, bucket_size):
+    """Build a histogram of total span weight per fixed-width bucket.
+
+    The number line is partitioned into buckets of width `bucket_size`
+    aligned to multiples of `bucket_size` (i.e. bucket starting at
+    k * bucket_size covers [k * bucket_size, (k+1) * bucket_size)).
+
+    For each bucket that overlaps at least one span, the result maps
+    the bucket's start coordinate to the sum of weights from every
+    span that overlaps that bucket.  A span contributes its full
+    weight to every bucket it touches, even if the overlap is partial.
+
+    Parameters
+    ----------
+    spans : list of Span
+        Weighted intervals to histogram.
+    bucket_size : int
+        Width of each histogram bucket.  Must be positive.
+
+    Returns
+    -------
+    dict[int, float]
+        Mapping from bucket-start to total overlapping weight.
+    """
+    if bucket_size <= 0:
+        raise ValueError("bucket_size must be positive")
+    hist = {}
+    for s in spans:
+        first_bucket = (s.lo // bucket_size) * bucket_size
+        last_bucket = ((s.hi - 1) // bucket_size) * bucket_size if s.hi > s.lo else first_bucket
+        b = first_bucket
+        while b <= last_bucket:
+            hist[b] = hist.get(b, 0.0) + s.weight
+            b += bucket_size
+    return hist
+
+
 if __name__ == "__main__":
     demo = [Span(0, 5, 1.0), Span(3, 8, 2.0), Span(10, 12, 0.5)]
     print("merged:", merge_spans(demo))
