@@ -41,12 +41,18 @@ class SkipList:
         return self._size
 
     def _find_update(self, key) -> list[Optional[_Node]]:
+        # Human rewrite: walk down levels collecting the rightmost node
+        # whose forward pointer stays strictly left of `key`.
         update: list[Optional[_Node]] = [None] * (MAX_LEVEL + 1)
-        current = self._header
-        for i in range(self._level, -1, -1):
-            while current.forward[i] is not None and current.forward[i].key < key:
-                current = current.forward[i]
-            update[i] = current
+        node = self._header
+        level = self._level
+        while level >= 0:
+            nxt = node.forward[level]
+            while nxt is not None and nxt.key < key:
+                node = nxt
+                nxt = node.forward[level]
+            update[level] = node
+            level -= 1
         return update
 
     def insert(self, key, value) -> None:
