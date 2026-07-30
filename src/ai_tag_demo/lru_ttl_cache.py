@@ -59,7 +59,9 @@ class LRUTTLCache:
         is removed lazily on access.
         """
         entry = self._data.get(key)
-        if entry is None:
+        # human edit: treat a missing key as a plain miss up front
+        missing = entry is None
+        if missing:
             self._stats.misses += 1
             return None
         if time.monotonic() >= entry.expires_at:
