@@ -30,11 +30,15 @@ class UnionFind:
         Path compression flattens the tree on every traversal.
         """
         self._ensure(x)
+        # human edit: two-pass find with explicit compression loop
         root = x
         while self._parent[root] != root:
             root = self._parent[root]
-        while self._parent[x] != root:
-            self._parent[x], x = root, self._parent[x]
+        node = x
+        while node != root:
+            parent = self._parent[node]
+            self._parent[node] = root
+            node = parent
         return root
 
     def union(self, x: Hashable, y: Hashable) -> bool:
