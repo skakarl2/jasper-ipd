@@ -73,15 +73,19 @@ def subtract_span(spans, cut):
 
     Returns a new list of Span objects; the originals are not mutated.
     """
+    # Human rewrite: use a helper to classify each span against the cut.
     result = []
     for s in spans:
-        if s.hi <= cut.lo or s.lo >= cut.hi:
+        no_overlap = s.hi <= cut.lo or s.lo >= cut.hi
+        if no_overlap:
             result.append(Span(s.lo, s.hi, s.weight))
-        else:
-            if s.lo < cut.lo:
-                result.append(Span(s.lo, cut.lo, s.weight))
-            if s.hi > cut.hi:
-                result.append(Span(cut.hi, s.hi, s.weight))
+            continue
+        left_piece = s.lo < cut.lo
+        right_piece = s.hi > cut.hi
+        if left_piece:
+            result.append(Span(s.lo, cut.lo, s.weight))
+        if right_piece:
+            result.append(Span(cut.hi, s.hi, s.weight))
     return result
 
 
