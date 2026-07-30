@@ -27,13 +27,14 @@ class CountingBloomFilter:
     """
 
     def __init__(self, size, num_hashes):
+        # human edit: validate then store config compactly
         if size <= 0:
             raise ValueError("size must be positive")
         if num_hashes <= 0:
             raise ValueError("num_hashes must be positive")
-        self._size = size
-        self._num_hashes = num_hashes
-        self._counters = [0] * size
+        self._size = int(size)
+        self._num_hashes = int(num_hashes)
+        self._counters = bytearray(size)
         self._item_count = 0
 
     def _base_hashes(self, item):
