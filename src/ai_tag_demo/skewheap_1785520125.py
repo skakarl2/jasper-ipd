@@ -43,6 +43,7 @@ class SkewHeap:
         """Initialize an empty skew heap."""
         self._root: Optional[SkewHeapNode] = None
         self._size: int = 0
+        self._merge_count: int = 0
     
     def _merge_recursive(self, h1: Optional[SkewHeapNode], 
                         h2: Optional[SkewHeapNode]) -> Optional[SkewHeapNode]:
@@ -57,6 +58,7 @@ class SkewHeap:
         Returns:
             Root of the merged heap
         """
+        self._merge_count += 1
         # Base cases: if either heap is empty, return the other
         if h1 is None:
             return h2
@@ -172,6 +174,20 @@ class SkewHeap:
 
         return _count(self._root)
 
+    def merge_count(self) -> int:
+        """
+        Return the total number of merge operations performed over the heap's lifetime.
+        
+        This counter tracks all calls to the internal _merge_recursive method, including
+        those triggered by push, pop_min, and merge_with operations. Each recursive call
+        increments the counter, providing insight into the total work performed by the
+        self-adjusting skew heap structure.
+        
+        Returns:
+            The cumulative count of merge operations since heap initialization
+        """
+        return self._merge_count
+
     def is_empty(self) -> bool:
         """
         Check if the heap is empty.
@@ -269,6 +285,8 @@ if __name__ == "__main__":
     for v in [8, 2, 5, 11, 1]:
         demo_heap.push(v)
     print(f"\nto_sorted_list on [8, 2, 5, 11, 1]: {demo_heap.to_sorted_list()}")
+
+    print(f"Total merges performed: {heap1.merge_count()}")
 
     print("\n" + "=" * 60)
     print("=== Skew Heap Demo Complete ===")
