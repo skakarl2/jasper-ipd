@@ -198,7 +198,45 @@ class LRUCache:
         self.cache.clear()
         self.head.next = self.tail
         self.tail.prev = self.head
-    
+
+    def peek(self, key):
+        """Return the value for key WITHOUT updating its recency/position.
+
+        Unlike get(), this does not move the node to the head of the list,
+        so the access order remains unchanged.
+
+        Args:
+            key: The key to look up in the cache.
+
+        Returns:
+            The value associated with the key, or None if the key is absent.
+        """
+        node = self.cache.get(key)
+        if node is None:
+            return None
+        return node.value
+
+    def resize(self, new_capacity):
+        """Change the cache capacity, evicting LRU entries if necessary.
+
+        If new_capacity is smaller than the current number of stored items,
+        the least-recently-used entries are evicted until the size equals
+        new_capacity.
+
+        Args:
+            new_capacity: The new maximum number of items the cache can hold
+                (must be >= 1).
+
+        Raises:
+            ValueError: If new_capacity is less than 1.
+        """
+        if new_capacity < 1:
+            raise ValueError("Cache capacity must be at least 1")
+        self.capacity = new_capacity
+        while len(self.cache) > self.capacity:
+            lru_node = self._pop_tail()
+            del self.cache[lru_node.key]
+
     def __repr__(self):
         """
         String representation showing cache contents in order from MRU to LRU.
