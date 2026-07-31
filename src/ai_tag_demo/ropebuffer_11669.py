@@ -277,6 +277,14 @@ class Rope:
         """Return the length of the rope."""
         return self.char_count
     
+    def reverse(self):
+        """Return a new Rope with the entire text reversed."""
+        return Rope(self.to_string()[::-1])
+
+    def find(self, substring):
+        """Return the index of the first occurrence of substring, or -1 if not found."""
+        return self.to_string().find(substring)
+
     def __str__(self):
         """String representation."""
         return self.to_string()
@@ -318,4 +326,14 @@ if __name__ == "__main__":
     print(f"Split at index 25:")
     print(f"  Left part: '{left}'")
     print(f"  Right part: '{right}'")
+    print()
+
+    # Reverse operation
+    reversed_rope = rope.reverse()
+    print(f"Reversed rope: '{reversed_rope}'")
+
+    # Find operation
+    find_idx = rope.find("fox")
+    print(f"Index of 'fox' in rope: {find_idx}")
+
     print("\n=== Demo Complete ===")
