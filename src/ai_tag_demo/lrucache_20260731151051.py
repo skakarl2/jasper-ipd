@@ -237,6 +237,28 @@ class LRUCache:
             lru_node = self._pop_tail()
             del self.cache[lru_node.key]
 
+    def merge_from(self, other):
+        """
+        Copy all key-value pairs from another LRUCache instance into this one.
+        
+        The entries from the other cache are inserted into this cache using put(),
+        in order from least-recently-used to most-recently-used. This ensures that
+        the relative recency order from the other cache is preserved in this cache.
+        
+        Args:
+            other: Another LRUCache instance to merge from
+        """
+        # Collect entries from other cache in LRU to MRU order (tail to head)
+        entries = []
+        current = other.tail.prev
+        while current != other.head:
+            entries.append((current.key, current.value))
+            current = current.prev
+        
+        # Insert entries in LRU-to-MRU order so most recent ends up at head
+        for key, value in entries:
+            self.put(key, value)
+
     def __repr__(self):
         """
         String representation showing cache contents in order from MRU to LRU.
