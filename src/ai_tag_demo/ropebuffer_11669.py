@@ -285,6 +285,18 @@ class Rope:
         """Return the index of the first occurrence of substring, or -1 if not found."""
         return self.to_string().find(substring)
 
+    def count_char(self, ch):
+        """
+        Count the number of times character ch appears in the rope's text.
+        
+        Args:
+            ch: Character to count
+            
+        Returns:
+            Number of occurrences of ch in the rope
+        """
+        return self.to_string().count(ch)
+
     def __str__(self):
         """String representation."""
         return self.to_string()
@@ -335,5 +347,8 @@ if __name__ == "__main__":
     # Find operation
     find_idx = rope.find("fox")
     print(f"Index of 'fox' in rope: {find_idx}")
+
+    # Count character operation
+    print(f"Count of 'e' in rope: {rope.count_char('e')}")
 
     print("\n=== Demo Complete ===")
