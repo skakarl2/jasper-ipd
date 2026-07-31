@@ -131,6 +131,47 @@ class SkewHeap:
         other._root = None
         other._size = 0
     
+    def to_sorted_list(self) -> list:
+        """
+        Return a new list of all keys in the heap in ascending sorted order.
+
+        This method does not mutate the original heap. It works by pushing
+        every key into a temporary SkewHeap clone, then repeatedly calling
+        pop_min on the clone to extract elements in order.
+
+        Returns:
+            A list of keys sorted from smallest to largest.
+        """
+        clone = SkewHeap()
+        for key in self.level_order_traversal():
+            clone.push(key)
+        result = []
+        while not clone.is_empty():
+            result.append(clone.pop_min())
+        return result
+
+    def count_less_than(self, threshold) -> int:
+        """
+        Return the number of keys in the heap that are strictly less than
+        the given threshold.
+
+        This method traverses the internal node structure recursively and
+        does not mutate the heap.
+
+        Args:
+            threshold: The value to compare each key against.
+
+        Returns:
+            The count of keys where key < threshold.
+        """
+        def _count(node: Optional[SkewHeapNode]) -> int:
+            if node is None:
+                return 0
+            current = 1 if node.key < threshold else 0
+            return current + _count(node.left) + _count(node.right)
+
+        return _count(self._root)
+
     def is_empty(self) -> bool:
         """
         Check if the heap is empty.
@@ -216,6 +257,19 @@ if __name__ == "__main__":
     assert sorted_values == expected, "Heap did not produce correct sorted order!"
     print("✓ Verification passed: Output is correctly sorted")
     
+    # Demonstrate count_less_than on heap2 (rebuilt for this demo)
+    heap2 = SkewHeap()
+    for value in data2:
+        heap2.push(value)
+    print(f"\nHeap2 keys: {list(heap2.level_order_traversal())}")
+    print(f"count_less_than(10) on heap2: {heap2.count_less_than(10)}")
+
+    # Demonstrate to_sorted_list on a small fresh heap
+    demo_heap = SkewHeap()
+    for v in [8, 2, 5, 11, 1]:
+        demo_heap.push(v)
+    print(f"\nto_sorted_list on [8, 2, 5, 11, 1]: {demo_heap.to_sorted_list()}")
+
     print("\n" + "=" * 60)
     print("=== Skew Heap Demo Complete ===")
     print("=" * 60)
