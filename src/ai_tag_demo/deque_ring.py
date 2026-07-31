@@ -30,3 +30,15 @@ class Deque:
 
     def peek_front(self):
         return self._items[0] if self._items else None
+
+    def rotate(self, n):
+        """Rotate the deque n steps to the right; negative n rotates left."""
+        if not self._items:
+            return
+        n = n % len(self._items)
+        if n:
+            self._items = self._items[-n:] + self._items[:-n]
+
+    def to_list(self):
+        """Return a shallow copy of the contents, front to back."""
+        return list(self._items)
