@@ -209,6 +209,31 @@ class Trie:
         collected.sort()
         return collected
 
+    def count_words(self):
+        """
+        Count the total number of complete words stored in the trie.
+
+        Performs a depth-first traversal of the entire trie structure,
+        examining each node to determine if it marks the end of a valid word.
+        Each node with word_complete set to True is counted exactly once.
+
+        Returns:
+            int: The total count of complete words in the trie.
+        """
+        count = 0
+        stack = [self.root]
+
+        while stack:
+            current = stack.pop()
+
+            if current.word_complete:
+                count += 1
+
+            for child_node in current.char_map.values():
+                stack.append(child_node)
+
+        return count
+
 
 if __name__ == "__main__":
     print("Trie Data Structure Demonstration")
