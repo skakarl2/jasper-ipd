@@ -221,3 +221,5 @@ if __name__ == "__main__":
         f"Empirical FP check: {false_positives}/10000 false positives "
         f"({false_positives / 10_000:.4%})"
     )
+
+# coalesce-validation touch (human)
