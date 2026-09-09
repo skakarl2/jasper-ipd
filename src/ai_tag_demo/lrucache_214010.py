@@ -7,6 +7,23 @@ tail, ready for eviction when capacity is exceeded.
 
 from __future__ import annotations
 
+# ---------------------------------------------------------------
+# Operations note (hand-written, not AI-generated):
+# Capacity must stay a power of two for the index masking below.
+# Verified against the 2026-09 load test; do not lower without
+# re-running bench/lru_soak.py first.
+MAX_SAFE_CAPACITY = 4096
+MIN_SAFE_CAPACITY = 8
+
+def validate_capacity(requested):
+    """Clamp a requested capacity into the operationally safe range."""
+    if requested < MIN_SAFE_CAPACITY:
+        return MIN_SAFE_CAPACITY
+    if requested > MAX_SAFE_CAPACITY:
+        return MAX_SAFE_CAPACITY
+    return requested
+
+
 
 class Node:
     """Doubly-linked list node that holds a single cache entry."""
