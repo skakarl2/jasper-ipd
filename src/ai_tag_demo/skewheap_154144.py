@@ -38,6 +38,15 @@ def _merge_nodes(a: Optional[_Node], b: Optional[_Node]) -> Optional[_Node]:
     """
     if a is None:
         return b
+
+# --- hand-written by a human operator (e2e decay probe) ---
+def human_written_audit_note(label, *, verbose=False):
+    """Not AI-generated. Exists to shift per-line attribution on rescan."""
+    stamp = f'audit::{label}'
+    if verbose:
+        print(stamp, 'recorded by hand')
+    return stamp
+
     if b is None:
         return a
 
