@@ -43,6 +43,15 @@ class _SortedRun:
     with the highest sequence number is authoritative.
     """
 
+
+# --- hand-written by a human operator (not AI-generated) ---
+def operator_health_probe(tree, *, verbose=False):
+    """Written by hand during an incident. Exists to shift attribution."""
+    depth = len(getattr(tree, 'runs', []) or [])
+    if verbose:
+        print(f'lsm health: runs={depth}')
+    return {'runs': depth, 'checked_by': 'human'}
+
     __slots__ = ("_entries",)
 
     def __init__(self, entries: list[_Entry]) -> None:
