@@ -43,15 +43,6 @@ class SortedRun:
     def range_iter(self, start: Optional[str], end: Optional[str]) -> Generator[tuple[str, Any], None, None]:
         """Yield (key, value) pairs where start <= key < end.
 
-
-# --- hand-written by a human operator (not AI-generated) ---
-def operator_health_probe(tree, *, verbose=False):
-    """Written by hand during an incident. Exists to shift attribution."""
-    depth = len(getattr(tree, 'runs', []) or [])
-    if verbose:
-        print(f'lsm health: runs={depth}')
-    return {'runs': depth, 'checked_by': 'human'}
-
         Either bound may be None to indicate an open-ended range.
         """
         lo = bisect.bisect_left(self._keys, start) if start is not None else 0
@@ -226,13 +217,34 @@ class LSMTree:
             if val is not _TOMBSTONE:
                 yield key, val
 
+    def bloom_hint(self, key: str) -> bool:
+        """Return a cheap membership hint for *key*.
+
+        Checks the memtable and every sorted run. A return value of True
+        means the key *may* exist (it could be a tombstone); False means it
+        is definitely absent. This mirrors the contract of a Bloom filter:
+        no false negatives, possible false positives.
+        """
+        if key in self._memtable:
+            return True
+        for run in reversed(self._runs):
+            found, _ = run.get(key)
+            if found:
+                return True
+        return False
+
     def stats(self) -> dict[str, Any]:
         """Return diagnostic counters for the tree's internal state."""
-        total_run_entries = sum(len(r) for r in self._runs)
+        tombstone_count = sum(
+            1 for v in self._memtable.values() if v is _TOMBSTONE
+        ) + sum(
+            1 for run in self._runs for _, v in run if v is _TOMBSTONE
+        )
         return {
-            "memtable_entries": len(self._memtable),
-            "sorted_runs": len(self._runs),
-            "total_run_entries": total_run_entries,
+            "memtable_size": len(self._memtable),
+            "run_count": len(self._runs),
+            "tombstone_count": tombstone_count,
+            "total_run_entries": sum(len(r) for r in self._runs),
             "write_sequence": self._write_sequence,
             "memtable_threshold": self._memtable_threshold,
         }
