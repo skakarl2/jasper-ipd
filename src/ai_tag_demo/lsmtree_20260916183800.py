@@ -43,15 +43,6 @@ class _SortedRun:
     with the highest sequence number is authoritative.
     """
 
-
-# --- hand-written by a human operator (not AI-generated) ---
-def operator_health_probe(tree, *, verbose=False):
-    """Written by hand during an incident. Exists to shift attribution."""
-    depth = len(getattr(tree, 'runs', []) or [])
-    if verbose:
-        print(f'lsm health: runs={depth}')
-    return {'runs': depth, 'checked_by': 'human'}
-
     __slots__ = ("_entries",)
 
     def __init__(self, entries: list[_Entry]) -> None:
@@ -293,6 +284,43 @@ class LSMTree:
     def run_count(self) -> int:
         """Number of immutable sorted runs currently held."""
         return len(self._runs)
+
+    def bloom_hint(self, key: str) -> bool:
+        """Return a cheap membership hint for *key*.
+
+        Checks the memtable and every sorted run for an entry matching *key*.
+        Returns ``True`` when *key* might exist (including as a tombstone) and
+        ``False`` when it is definitely absent. This is not a probabilistic
+        Bloom filter but mirrors its API for use as a fast pre-check before a
+        full ``get()``.
+        """
+        if self._memtable.get(key) is not None:
+            return True
+        for run in self._runs:
+            for e in run:
+                if e.key == key:
+                    return True
+                if e.key > key:
+                    break
+        return False
+
+    def stats(self) -> dict[str, int]:
+        """Return a snapshot of current storage statistics.
+
+        Returns:
+            A dict with keys ``memtable_size`` (unique keys buffered in the
+            memtable), ``run_count`` (number of immutable sorted runs), and
+            ``tombstone_count`` (total tombstone entries across the memtable
+            and all sorted runs).
+        """
+        tombstones = sum(1 for e in self._memtable.entries() if e.is_tombstone)
+        for run in self._runs:
+            tombstones += sum(1 for e in run if e.is_tombstone)
+        return {
+            "memtable_size": len(self._memtable),
+            "run_count": len(self._runs),
+            "tombstone_count": tombstones,
+        }
 
     def __len__(self) -> int:
         """Approximate number of entries across the memtable and all runs.
